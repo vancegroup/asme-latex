@@ -195,3 +195,19 @@ There are two ways to fix this:
    \newcommand\labelitemi{\textbullet}
 to the file after
    \documentclass[...]{asme2e}
+
+***********************************************************************
+Question 9: 
+
+Question:
+I kept having the following messages
+   Warning: font "psyro" ("psyro") not in font dictionary
+   Warning: font "psyr" ("psyr") not in font dictionary
+when I use Scientific Word 3.5 to compile and preview.  
+These fonts are installed. How do I fix this problem?
+
+Answer:
+(by Jian-Qiao Sun, University of California, Merced, jqsun@ucmerced.edu):
+Comment out the following two lines in asme2e.cls.
+   \RequirePackage{times}      % Loads the Times-Roman Fonts
+   \RequirePackage{mathptmx}    % Loads the Times-Roman Math Fonts

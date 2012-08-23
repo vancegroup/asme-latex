@@ -4,6 +4,19 @@
 
 ********************************************************************
 Release history: 
+   version 1.7, August 1, 2012. 
+      (1) added 
+       \special{papersize=8.5in,11in}
+        to asme2e.tex
+                       --- Hongtai Cheng <h_c45@txstate.edu>
+   version 1.7, Jan 11, 2010. 
+      Modified asme2e.cls with the following changes:
+       (1) Greek letters in math mode are italicized.
+       (2) Figure captions are in uppercase bold sans serif font of 9 points.
+       (3) The defined commands \hour \minute conflict with the commands 
+           \hour and minute in the approved package SIunits.  
+           They were changed to \thour and \tminute.
+                          --- Marc LaViolette <laviolette-m@rmc.ca>
    version 1.6, May 24, 2009. 
        (1) Modified asmems4.bst to use \textbf for handling boldface.
                           --- Tim Lahey <tjlahey@cgl.uwaterloo.ca>

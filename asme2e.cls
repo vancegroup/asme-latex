@@ -1,12 +1,19 @@
 % ASME DOCUMENT CLASS - asme2e.cls
-% 	for LaTeX version 2e - 2/14/01
+% 	for LaTeX version 2e - 2/14/10
 %
 % WARNING: This is an unauthorized class file. It has not been thoroughly
-% tested so it probably still has bugs. I'll do my best to fix them when 
+% tested so it probably still has bugs. We will do our best to fix them when 
 % found.
 %
 % ---------------------------------------------------------------------------
 %   filename:      asme2e.cls
+%   version 1.6, Jan 11, 2010. 
+%        (1) Greek letters in math mode are italicized.
+%        (2) Figure captions are in uppercase bold sans serif font of 9 points.
+%        (3) The defined commands \hour \minute conflict with the commands 
+%              \hour and minute in the approved package SIunits.  
+%              They were changed to \thour and \tminute.
+%             --- Marc LaViolette <laviolette-m@rmc.ca>
 %   version 1.4, May 12, 2005. 
 %        (1) Modified asme2e.cls to support pdflatex  
 %        (2) Modified asme2e.cls to support multiple lines in conference name.
@@ -42,7 +49,7 @@
 
 \RequirePackage{ifthen}
 \RequirePackage{times}      % Loads the Times-Roman Fonts
-\RequirePackage{mathptm}    % Loads the Times-Roman Math Fonts
+\RequirePackage{mathptmx}    % Loads the Times-Roman Math Fonts
 \RequirePackage{ifpdf}      % Needed to pick between latex and pdflatex
 
 \newboolean{@titlepage}
@@ -75,8 +82,8 @@
   January\or February\or March\or April\or May\or June\or
   July\or August\or September\or October\or November\or December\fi
   \space\number\day, \number\year}
-\newcommand\currenttime{\minute\time\hour\minute\divide\hour60
-\the\hour:\multiply\hour60\advance\minute-\hour\the\minute}
+\newcommand\currenttime{\tminute\time\thour\tminute\divide\thour60
+\the\thour:\multiply\thour60\advance\tminute-\thour\the\tminute}
 
 
 
@@ -704,7 +711,7 @@
 \def\fps@figure{tbp}
 \def\ftype@figure{1}
 \def\ext@figure{lof}
-\def\fnum@figure{\figurename~\thefigure}
+\def\fnum@figure{\small\textbf{\textsf{\MakeUppercase{\figurename~\thefigure}}}}
 \newenvironment{figure}
                {\@float{figure}}
                {\end@float}
@@ -716,7 +723,7 @@
 \def\fps@table{tbp}
 \def\ftype@table{2}
 \def\ext@table{lot}
-\def\fnum@table{\tablename~\thetable}
+\def\fnum@table{\small\textbf{\textsf{\MakeUppercase{\tablename~\thetable}}}}
 \newenvironment{table}{%
             \small
             \renewcommand{\arraystretch}{1.5}
@@ -1327,9 +1334,9 @@
 %     \hfil Copyright\ \ \copyright\ \confyear\ by ASME}%
 %     \let\@evenhead\@oddhead\let\@evenfoot\@oddfoot}
 
-\newcount\minute\newcount\hour
-\def\currenttime{\minute\time\hour\minute\divide\hour60
-\the\hour:\multiply\hour60\advance\minute-\hour\the\minute}
+\newcount\tminute\newcount\thour
+\def\currenttime{t\minute\time\thour\tminute\divide\thour60
+\the\thour:\multiply\thour60\advance\tminute-\thour\the\tminute}
 
 \markboth{}{}
 \ps@myheadings
