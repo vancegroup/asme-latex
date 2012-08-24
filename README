@@ -4,6 +4,11 @@
 
 ********************************************************************
 Release history: 
+   version 1.4, May 12, 2005. 
+       (1) Modified asme2e.cls to support pdflatex  
+       (2) Modified asme2e.cls to support multiple lines in conference name.
+           asme2e.tex modified with a conference with multiple lines.
+                          --- Matt Campbell mtycampbell@ucdavis.edu
    version 1.3, Januaray 9, 2005. 
        (1) Top margin of the layput changed in asme2e.cls.
        asme2e.cls1.2 is for ASME DETC template version 1.2.
@@ -79,11 +84,14 @@ Note: (1) To get article asme2e in TeX dvi format, type
 Contributors:
    Harry H. Cheng    hhcheng@ucdavis.edu     
            the original creator of the template.
-   Kirk Van Katwyk   Kirk_VanKatwyk@amat.com   
+   Kirk Van Katwyk   
            contributed to asme.sty and asme2e.cls
    Ken Sprott        kssprott@ucdavis.edu      
            contributed asme2e.cls and ASME bibliography 
    Geoffrey Shiflett shiflett@usc.edu          
            created ASME bibliography stype file asmems4.bst with details 
            explained in asme2e.tex.
+   Matt Campbell mtycampbell@ucdavis.edu
+           modified asme2e.cls to support pdflatex and conference name with
+           multiple lines.
 

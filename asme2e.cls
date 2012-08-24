@@ -1,4 +1,4 @@
-% ASME DOCUMENT CLASS - asme.cls
+% ASME DOCUMENT CLASS - asme2e.cls
 % 	for LaTeX version 2e - 2/14/01
 %
 % WARNING: This is an unauthorized class file. It has not been thoroughly
@@ -6,8 +6,12 @@
 % found.
 %
 % ---------------------------------------------------------------------------
-%   filename:      asme.cls
-%   version:       2.1
+%   filename:      asme2e.cls
+%   version 1.4, May 12, 2005. 
+%        (1) Modified asme2e.cls to support pdflatex  
+%        (2) Modified asme2e.cls to support multiple lines in conference name.
+%             --- Matt Campbell mtycampbell@ucdavis.edu
+%   version:       1.2
 %   date:          6/29/01
 %   ported by:     Kenneth Sprott
 %   address:       Department of Mechanical Engineering
@@ -30,7 +34,7 @@
 %                     page.
 %                  6. Add cleanfoot option to eliminate the copyright on each 
 %                     footer.
-%   usage:         \documentclass[options]{asme}
+%   usage:         \documentclass[options]{asme2e}
 % ---------------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
@@ -39,8 +43,7 @@
 \RequirePackage{ifthen}
 \RequirePackage{times}      % Loads the Times-Roman Fonts
 \RequirePackage{mathptm}    % Loads the Times-Roman Math Fonts
-
-
+\RequirePackage{ifpdf}      % Needed to pick between latex and pdflatex
 
 \newboolean{@titlepage}
 \newcommand\@ptsize{}
@@ -330,7 +333,14 @@
 \setlength{\paperwidth}{8.5in}
 \setlength{\oddsidemargin}{48pt}
 \setlength{\evensidemargin}{48pt}
-\setlength{\topmargin}{2.0in}
+% Added by Matt Campbell to make compatible with pdflatex 3/8/2005
+\ifpdf%
+   \setlength{\topmargin}{1.3in}% use 1.3in top margin for pdflatex
+\else
+   \setlength{\topmargin}{2.0in}% use 2.0in top marging for latex - same as original
+\fi
+%\setlength{\topmargin}{2.0in}% original line 
+% End pdflatex section
 \setlength{\marginparwidth}{0pt}
 \setlength{\marginparsep}{11pt}
 \setlength{\marginparpush}{5pt}
@@ -819,16 +829,15 @@
    \vbox{\hbox to \textwidth{\begin{tabular}{@{}c@{\hskip3pc}}
    \hbox to 46pt{\vbox to 46pt{\vss\hsize46pt\vss}}\end{tabular}\hss
   \vbox{\hsize37pc\scriptsize\sf\vskip\baselineskip%
-  \bannerfnt
+  \bannerfnt\begin{flushright}% added flushright to properly wrap long conference names
   \hfill Proceedings of \@confshortname\par
   \hfill \@conffullname\par
   \hfill \@confmonth\ \@confdate, \@confyear, \@confcity, \@confcountry
 
-
   \vskip.5in
-  \hfill {\pnumfnt\@papernum}}
+  \hfill {\pnumfnt\@papernum}\end{flushright}}
   \hskip1pc}}
-  \vskip.25in
+  \vskip.15in%.25in original value w/out flushright
   \vskip .25pc{\large\twlsfb
                \begin{center}\leftskip.5in plus1fill\rightskip\leftskip
                \@title\par\end{center}}
