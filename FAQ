@@ -1,4 +1,4 @@
-**************
+***********************************************************************
 Question 1:
 Could  you please send the information regarding importing 
 encapsulated postscript (*.eps) files (figures)  
@@ -11,15 +11,18 @@ Answer by Kirk Van Katwyk at Kirk_VanKatwyk@amat.com:
 You may use the 'epsfig' package to incorporate an encapsulated postscript
 figure into your document.  To include the package in LaTeX2e, use
 "\usepackage{epsfig}" in the preamble of your document.  Use
-"\epsfig{file=file.eps}" to incorporate the eps file in the figure
-environment.  You may use width and/or height arguments to change the size
+"\epsfig{file=file.eps}" to incorporate the eps file in the figure environment.  
+You may use width and/or height arguments to change the size
 of the original figure, e.g. "\epsfig{file=file.eps,width=3in}."
 
 If you are using LaTeX 2.09, use "\input{psfig}" in the preamble and use
 "\psfig{figure=file.eps}" to include the eps file.  The height and width
 arguments are the same.
 
-**************
+Note: the argument for \epsfig{} and \psfig{} starts with 
+"file=" and "figure=", respectively.
+
+***********************************************************************
 Question 2:
 I am current preparing a paper to be submitted in an ASME conference.
 There is a problem we are not able to solve. The problem is the
@@ -35,7 +38,7 @@ In LaTeX2e, use the \mathbf{} command
 to make a bold math character.  
 If that doesn't work, you will have to use an ams-LaTeX package.  
 
-**************
+***********************************************************************
 Question 3: 
 How can I get bold italics?
 
@@ -43,8 +46,8 @@ Answer by Kirk Van Katwyk at Kirk_VanKatwyk@amat.com:
 try \newcommand{\bAC}{\mbox{$\mathbf{AC}$}}
 You could also try \textbf{\emph AC}
 
-**************
-Question 3: 
+***********************************************************************
+Question 4: 
 
 I've been using your LaTeX2e asme2e.cls package to prepare a paper
 for an upcoming conference, but have been having some trouble with the
@@ -107,3 +110,26 @@ http://www.ctan.org and click on the search link to search for the two files.
 Download them to the same directory as your paper and rerun LaTeX2e.
 You should ask your system administrators to install psnfss with the proper font
 description files.
+
+
+
+***********************************************************************
+Question 5: 
+
+How do you use .jgp and .png images as figures in LaTex when using PDF Texify?
+
+Answer by Adam Pautsch at agpautsch@wisc.edu:
+To include images, you must load the package "graphicx" in the preamble of 
+the document. With the image file in the same folder as the .tex file, use 
+the line "\includegraphics[keepaspectratio,width=3in]{filename.jgp}" to 
+insert the image file. This may be included inside of a "figure" environment, 
+which will allow for automatic captioning with the "\caption{}" command.
+
+The images included in this manner will only appear when the "draft" option is
+not used. When "draft" is used as an option, a box represnting an image with
+the image's filename will appear in its place.
+
+More information about handling images of different formats may be found at
+     http://www.tex.ac.uk/cgi-bin/texfaq2html?label=dvipsgraphics
+     http://www.tex.ac.uk/cgi-bin/texfaq2html?label=pdftexgraphics
+

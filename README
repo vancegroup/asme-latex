@@ -2,6 +2,22 @@
    ASME DETC LaTeX Style for LaTeX verson 2e
 ********************************************************************
 
+********************************************************************
+Release history: 
+       No version num, May 7, 1994
+               the initial distribution of the template
+       version 1.1, February 16, 2001 
+               support new ASME bibliography style
+       version 1.2, January 25, 2003. 
+               support the modified ASME bibliography style
+       version 1.2, August 26, 2003. 
+               updated ASME bibliography style file asmems4.bst.
+               removed brackets surrounding month in article citations
+       version 1.2, August 28, 2003. 
+               updated asme2e.cls. THe 1st page heading is
+               location, date instead of the reverse.
+
+********************************************************************
 Files included in this distribution:
 
 FAQ            frequently asked questions.
@@ -9,20 +25,30 @@ README         this file
 README2        information about  Postscript Type 1 fonts
                if you run into trouble with times.sty, mathptm.sty,
                and pifont.sty.
+Makefile       a sample Makefile for creating asme2e.pdf and 
+               abstract.pdf in Unix.
 asme2e.cls     LaTeX style class package for papers of the American
                Society of Mechanical Engineers. Questions related to
-               asme2e.cls may be addressed to kvankatw@iel.ucdavis.edu
+               asme2e.cls may be addressed to Ken Sprott 
+               at kssprott@ucdavis.edu
+asmems4.bst    ASME bibliography style file. Questions related to
+               asmems4.bst may be addressed to Geoffrey Shiflett 
+               at shiflett@usc.edu          
 asme2e.tex     Sample file which uses the asme2e.cls and documents 
                some specifications of ASME paper.
-asme2e.ps      Pre-compiled PostScript version of asme2e.tex
+asme2e.pdf     PDF file generated from asme2e.tex
 asbstract.tex  Template of the extended abstract of an ASME paper.
-asbstract.ps   Pre-compiled PostScript version of abstract.tex.
+asbstract.pdf  PDF file generated from abstract.tex.
 
 
+********************************************************************
 Note: (1) To get article asme2e in TeX dvi format, type
              latex asme2e
+             bibtex asme2e
              latex asme2e
-
+             dvips -o asme2e.ps asme2e
+      (2) To get asmee2.pdf file from TeX dvi file, use Adobe Acrobat or type
+             ps2pdf asme2e.ps asme2e.pdf
       (2) The package array is included in the class file asme2e.cls. 
           See "The LaTeX Companion" book for a description of its use 
           in compiling tables.
@@ -30,4 +56,16 @@ Note: (1) To get article asme2e in TeX dvi format, type
           in the theorem environment.
       (4) To get unnumbered equations, use the package amslatex
           in your document.
+
+********************************************************************
+Contributors:
+   Harry H. Cheng    hhcheng@ucdavis.edu     
+           the original creator of the template.
+   Kirk Van Katwyk   Kirk_VanKatwyk@amat.com   
+           contributed to asme.sty and asme2e.cls
+   Ken Sprott        kssprott@ucdavis.edu      
+           contributed asme2e.cls and ASME bibliography 
+   Geoffrey Shiflett shiflett@usc.edu          
+           created ASME bibliography stype file asmems4.bst with details 
+           explained in asme2e.tex.
 

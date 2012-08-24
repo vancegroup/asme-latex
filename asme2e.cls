@@ -1,8 +1,10 @@
 % ASME DOCUMENT CLASS - asme.cls
 % 	for LaTeX version 2e - 2/14/01
+%
 % WARNING: This is an unauthorized class file. It has not been thoroughly
 % tested so it probably still has bugs. I'll do my best to fix them when 
 % found.
+%
 % ---------------------------------------------------------------------------
 %   filename:      asme.cls
 %   version:       2.1
@@ -37,6 +39,8 @@
 \RequirePackage{ifthen}
 \RequirePackage{times}      % Loads the Times-Roman Fonts
 \RequirePackage{mathptm}    % Loads the Times-Roman Math Fonts
+
+
 
 \newboolean{@titlepage}
 \newcommand\@ptsize{}
@@ -817,8 +821,9 @@
   \vbox{\hsize37pc\scriptsize\sf\vskip\baselineskip%
   \bannerfnt
   \hfill Proceedings of \@confshortname\par
-  \hfill \@confyear\ \@conffullname\par
-  \hfill \@confcity, \@confcountry, \@confmonth\ \@confdate, \@confyear
+  \hfill \@conffullname\par
+  \hfill \@confmonth\ \@confdate, \@confyear, \@confcity, \@confcountry
+
 
   \vskip.5in
   \hfill {\pnumfnt\@papernum}}
