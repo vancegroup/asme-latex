@@ -79,7 +79,21 @@ Note: (1) To get article asme2e in TeX dvi format, type
           in compiling tables.
       (3) The class file asme2e.cls will not produce unnumbered theorems 
           in the theorem environment.
-      (4) To get unnumbered equations, use the p˜àX@”lßL:U§Ç—áVÑ¡îí‡Õõ?÷š:»f?h, ñt`‚û5@ÍØqú‰ş=ËöàU’JNI–Ï_&5â(Ê›¥ºI#«“Ns†*Øç-úí‰ëyš½„e<.«œ#¡˜“#Q‘f[ˆ¤‘ÀHW!¾w”ÇÅĞŒÒÈØƒ>|)2d²bı/bq"’0L9İ“pm¨c€ÀÎŠf0fv_ì‚U¤u{=Ÿ‡ãtRüR¸L›kº{Pd¬¬’œ*2ùP‡ş‹…ÌAïšÌk#Ò¡LìÅ[š‚û"Yú@+Uå™I³¼cÕ¦9"	ÜÏ–;¯eëát™ß ƒ‡¢ªÙÌŠø0EÁQĞ%zŠªv—Wò=\°0<Do—K	%ôÁ–
-HA2,»
-›Ñ»v"~v Ä¡Ô…ÌËÎ›nRŸ7?øyzØê@äsuXk€ZöBb4ç‰;E>Á3÷à£}S=¤p˜Kúá7ô¹â/Ûu½ÎY	û@æ6ŒWf´QSf laÆ¬è7wí¥Í¡	Ú»è.Gœ-X´^?·»½Ô>²ErKe¢¹‰™êÇévKš²»YºzÚ,z‡×Â»%eİwá÷¯ßY·Úïîôwhòí›Ø;ø7çãÈ ˆ&¹ïİ½z–÷åîş±˜/ÿ`İ§²šúRÔÅ×nlXŸ]wÄ£ÃûÇá‚Š$›ÇïÑ|8É|Ïşu¿¢3ÒUËäş/cNÊ˜ÒÇï„ôŸ9µ.}ıR–/Õ‹dŸY¬ÏÕ­Ke­#³ó 9+>·OÁÖäà)çQÉğ¥ËÉĞñÁë~E]`zÌÑ”¿s'‚´:Íb¾3îà.dàÂ¶±;yEdëx"ŠGj–œİ}æ
-b5éI	ÕD{BGÃ”²ì²­ı‹êÂİp‡P(±?ŸË®\€
+      (4) To get unnumbered equations, use the package amslatex
+          in your document.
+
+********************************************************************
+Contributors:
+   Harry H. Cheng    hhcheng@ucdavis.edu     
+           the original creator of the template.
+   Kirk Van Katwyk 
+           contributed to asme.sty and asme2e.cls
+   Ken Sprott        kssprott@ucdavis.edu      
+           contributed asme2e.cls and ASME bibliography 
+   Geoffrey Shiflett shiflett@usc.edu          
+           created ASME bibliography stype file asmems4.bst with details 
+           explained in asme2e.tex.
+   Matt Campbell mtycampbell@ucdavis.edu
+           modified asme2e.cls to support pdflatex and conference name with
+           multiple lines.
+
