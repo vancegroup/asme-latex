@@ -4,6 +4,23 @@
 
 ********************************************************************
 Release history: 
+   version 1.7.2, in progress as of Aug 24, 2012.
+        (1) Posted Git repository of current and historical versions of
+            this and related classes at
+            https://github.com/vancegroup/asme-latex
+        (2) Remove abstract.*
+        (3) Replace makefile with one based on 
+            https://github.com/ransford/pdflatex-makefile for better pdflatex
+            support.
+        (4) Renamed sample files to sampleasme2e.* for clarity.
+             --- Ryan Pavlik <rpavlik@iastate.edu>
+
+   version 1.7.1, Mar 17, 2010. 
+        (1) Remove embedded cite.sty and just use one.
+        (2) Part and section headings in uppercase.
+        (3) Remove commented-out "boatanchors" in favor of version control.
+             --- Ryan Pavlik <rpavlik@iastate.edu>
+
    version 1.7, August 1, 2012. 
       (1) added 
        \special{papersize=8.5in,11in}
