@@ -48,7 +48,6 @@
 %%% by ASME for your paper.
 \papernum{DETC2010/MECH-12345}
 
-%%% You need to remove 'DRAFT: ' in the title for the final submitted version.
 \title{DRAFT: AN ARTICLE CREATED USING \LaTeX2\raisebox{-.3ex}{$\epsilon$}\ IN ASME FORMAT}
 
 %%% first author
