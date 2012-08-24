@@ -1,16 +1,28 @@
-# type "make" command in Unix to create asme2e.pdf file 
+# For simplicity and reliability, we're using the pdflatex-makefile base
+# whose project is located here: https://github.com/ransford/pdflatex-makefile
+#
+# If this is from a tarball, you'll see the subdirectory already existing.
+# If this is from Git, and you didn't do a git clone --recursive
+# it will warn you and help you set up the "submodule" that pulls in
+# those files.
+
+# Default target uses pdflatex to build, and tries to build minimally.
+# Other targets:
+#   make clean
+#   make view - opens the PDF in your PDF viewer.
+
+TARGET = asme2e
+
+# check whether pdflatex-makefile submodule is initialized
+ifneq ($(wildcard pdflatex-makefile/Makefile.include),)
+include pdflatex-makefile/Makefile.include
+else
+##### begin submodule-initialization targets
+.PHONY: all
 all:
-	latex asme2e
-	bibtex asme2e
-	latex asme2e
-	latex asme2e
-	dvips -o asme2e.ps asme2e
-	ps2pdf asme2e.ps asme2e.pdf
-
-abstract:
-	latex abstract
-	dvips -o abstract.ps abstract
-	ps2pdf abstract.ps abstract.pdf
-
-clean:
-	(rm -rf *.ps *.log *.dvi *.aux *.*% *.lof *.lop *.lot *.toc *.idx *.ilg *.ind *.bbl *blg)
+      @echo Run 'make setup' and then 'make' again.
+setup:
+      cd "$(shell git rev-parse --show-toplevel)" && git submodule init \
+              && git submodule update
+##### end submodule action
+endif
