@@ -830,8 +830,8 @@
    \hbox to 46pt{\vbox to 46pt{\vss\hsize46pt\vss}}\end{tabular}\hss
   \vbox{\hsize37pc\scriptsize\sf\vskip\baselineskip%
   \bannerfnt\begin{flushright}% added flushright to properly wrap long conference names
-  \hfill Proceedings of \@confshortname\par
-  \hfill \@conffullname\par
+  \hfill Proceedings of \@conffullname\par
+  \hfill \@confshortname\par
   \hfill \@confmonth\ \@confdate, \@confyear, \@confcity, \@confcountry
 
   \vskip.5in

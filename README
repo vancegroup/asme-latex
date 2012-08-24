@@ -4,6 +4,10 @@
 
 ********************************************************************
 Release history: 
+   version 1.5, January 12, 2009. 
+       (1) Modified asme2e.tex to use a new header
+       (2) Modified asme2e.cls to use a new header
+                          --- Harry H. Cheng hhcheng@ucdavis.edu
    version 1.4, May 12, 2005. 
        (1) Modified asme2e.cls to support pdflatex  
        (2) Modified asme2e.cls to support multiple lines in conference name.
@@ -53,7 +57,7 @@ Makefile       a sample Makefile for creating asme2e.pdf and
 asme2e.cls     LaTeX style class package for papers of the American
                Society of Mechanical Engineers. Questions related to
                asme2e.cls may be addressed to Ken Sprott 
-               at kssprott@ucdavis.edu
+               at sprottk@gaia.ecs.csus.edu
 asmems4.bst    ASME bibliography style file. Questions related to
                asmems4.bst may be addressed to Geoffrey Shiflett 
                at shiflett@usc.edu          
@@ -86,7 +90,7 @@ Contributors:
            the original creator of the template.
    Kirk Van Katwyk   
            contributed to asme.sty and asme2e.cls
-   Ken Sprott        kssprott@ucdavis.edu      
+   Ken Sprott        sprottk@gaia.ecs.csus.edu
            contributed asme2e.cls and ASME bibliography 
    Geoffrey Shiflett shiflett@usc.edu          
            created ASME bibliography stype file asmems4.bst with details 
