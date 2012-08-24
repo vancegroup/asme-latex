@@ -13,8 +13,8 @@
 %     1/24/88	(OP&HWT) Updated for BibTeX version 0.99a, Oren Patashnik;
 %                        corrected the abbreviations to "Mar." and "Sept.";
 %                        SINCE THE `acm' VERSION ON WHICH THIS 'asmems4'
-%                        version WAS BASED DOES NOT WORK WITH BIBTEX 0.98i, 
-%                        DON"T EXPECT 'asmems4' TO WORK WITH 
+%                        version WAS BASED DOES NOT WORK WITH BIBTEX 0.98i,
+%                        DON"T EXPECT 'asmems4' TO WORK WITH
 %                        BIBTEX 0.98i EITHER.
 %     1/1/03    (GRS)   `acm' blended with 'unsrt' and 'apalike' to create
 %                       'asmems4'
@@ -31,6 +31,9 @@
 %                       modified proceedings and inproceedings to
 %                          capitalize Vol.
 %                          uncapitalize ed. and eds.
+%
+%    8/24/2012  (RAP)   Merged URL support from asme_journals.bst by Patrick W Daly
+%                       Performed cleanup for LyX support.
 
 ENTRY
   { address
@@ -39,6 +42,7 @@ ENTRY
     chapter
     edition
     editor
+    eid
     howpublished
     institution
     journal
@@ -53,6 +57,7 @@ ENTRY
     series
     title
     type
+    url
     volume
     year
   }
@@ -75,15 +80,15 @@ FUNCTION {output.nonnull}
   output.state mid.sentence =
     { ", " * write$ }
     { output.state after.block =
-	{ add.period$ write$
-	  newline$
-	  "\newblock " write$
-	}
-	{ output.state before.all =
-	    'write$
-	    { add.period$ " " * write$ }
-	  if$
-	}
+        { add.period$ write$
+          newline$
+          "\newblock " write$
+        }
+        { output.state before.all =
+            'write$
+            { add.period$ " " * write$ }
+          if$
+        }
       if$
       mid.sentence 'output.state :=
     }
@@ -336,25 +341,26 @@ FUNCTION {format.title}
 }
 
 FUNCTION {n.dashify}
-{ 't :=
+{
+  't :=
   ""
     { t empty$ not }
     { t #1 #1 substring$ "-" =
-	{ t #1 #2 substring$ "--" = not
-	    { "--" *
-	      t #2 global.max$ substring$ 't :=
-	    }
-	    {   { t #1 #1 substring$ "-" = }
-		{ "-" *
-		  t #2 global.max$ substring$ 't :=
-		}
-	      while$
-	    }
-	  if$
-	}
-	{ t #1 #1 substring$ *
-	  t #2 global.max$ substring$ 't :=
-	}
+        { t #1 #2 substring$ "--" = not
+            { "--" *
+              t #2 global.max$ substring$ 't :=
+            }
+            {   { t #1 #1 substring$ "-" = }
+                { "-" *
+                  t #2 global.max$ substring$ 't :=
+                }
+              while$
+            }
+          if$
+        }
+        { t #1 #1 substring$ *
+          t #2 global.max$ substring$ 't :=
+        }
       if$
     }
   while$
@@ -373,7 +379,7 @@ FUNCTION {format.date}
 %	'year                     % ASME wants the year after the author
 %	{ month " " * year * }    % rather than here so
 	{ "" }                    % print nothing if month is empty
-	
+
 	{  month }                % or just the month if month is full.
       if$
     }
@@ -402,7 +408,6 @@ FUNCTION {either.or.check}
 FUNCTION {format.bvolume}
 { volume empty$
     { "" }
-%    { "vol.~" volume *
     { "Vol.~" volume *        % ASME wants Vol. instead of vol.
       series empty$
 	'skip$
@@ -465,8 +470,8 @@ FUNCTION {multi.page.check}
       swap$ duplicate$ "," =
       swap$ "+" =
       or or
-	{ #1 'multiresult := }
-	{ t #2 global.max$ substring$ 't := }
+        { #1 'multiresult := }
+        { t #2 global.max$ substring$ 't := }
       if$
     }
   while$
@@ -560,7 +565,7 @@ FUNCTION {format.in.ed.booktitle}
   if$
 }
 
-% Proceedings titles don't have an (address, date) appended in ASME 
+% Proceedings titles don't have an (address, date) appended in ASME
 % bibliographies so forget the following function.
 
 % The proceedings title (it's on the stack) gets an (address, date) appended
@@ -582,7 +587,7 @@ FUNCTION {format.in.ed.booktitle}
 %	    'skip$
 %	    { address * ", " * }
 %	  if$
-%	  format.date * 
+%	  format.date *
 %	  ")" *
 %	}
 %      if$
@@ -690,7 +695,8 @@ FUNCTION {format.book.crossref}
 }
 
 FUNCTION {format.incoll.inproc.crossref}
-{ editor empty$
+{
+  editor empty$
   editor field.or.null author field.or.null =
   or
     { key empty$
@@ -1258,7 +1264,14 @@ FUNCTION {begin.bib}
     'skip$
     { preamble$ write$ newline$ }
   if$
-  "\begin{thebibliography}{"  longest.label  * "}" * write$ newline$
+  "\begin{thebibliography}{"  longest.label  * "}" *
+  write$ newline$
+  "\newcommand{\enquote}[1]{``#1''}"
+  write$ newline$
+  "\providecommand{\url}[1]{\texttt{#1}}"
+  write$ newline$
+  "\providecommand{\urlprefix}{URL }"
+  write$ newline$
 }
 
 EXECUTE {begin.bib}

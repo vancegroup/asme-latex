@@ -1,5 +1,5 @@
 % ASME DOCUMENT CLASS - asme2e.cls
-% 	for LaTeX version 2e - 2/14/10
+% 	for LaTeX version 2e - 3/17/10
 %
 % WARNING: This is an unauthorized class file. It has not been thoroughly
 % tested so it probably still has bugs. We will do our best to fix them when 
@@ -7,6 +7,11 @@
 %
 % ---------------------------------------------------------------------------
 %   filename:      asme2e.cls
+%   version 1.7.1, Mar 17, 2010. 
+%        (1) Remove embedded cite.sty and just use one.
+%        (2) Part and section headings in uppercase.
+%        (3) Remove commented-out "boatanchors" in favor of version control.
+%             --- Ryan Pavlik <rpavlik@iastate.edu>
 %   version 1.6, Jan 11, 2010. 
 %        (1) Greek letters in math mode are italicized.
 %        (2) Figure captions are in uppercase bold sans serif font of 9 points.
@@ -45,7 +50,7 @@
 % ---------------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{asme2e}[2001/2/14 v2.0 Standard LaTeX document class]
+\ProvidesClass{asme2e}[2010/03/17 v1.7.1 ASME conference paper class]
 
 \RequirePackage{ifthen}
 \RequirePackage{times}      % Loads the Times-Roman Fonts
@@ -347,7 +352,6 @@
 \else
    \setlength{\topmargin}{2.0in}% use 2.0in top marging for latex - same as original
 \fi
-%\setlength{\topmargin}{2.0in}% original line 
 % End pdflatex section
 \setlength{\marginparwidth}{0pt}
 \setlength{\marginparsep}{11pt}
@@ -550,7 +554,7 @@
        \Large\bfseries \partname~\thepart
        \par\nobreak
      \fi
-     \huge \bfseries #2%
+     \huge \bfseries \MakeUppercase{#2}%
      \markboth{}{}\par}%
     \nobreak
     \vskip 3ex
@@ -559,7 +563,7 @@
     {\parindent \z@ \raggedright
      \interlinepenalty \@M
      \normalfont
-     \huge \bfseries #1\par}%
+     \huge \bfseries \MakeUppercase{#1}\par}%
      \nobreak
      \vskip 3ex
      \@afterheading}
@@ -578,7 +582,7 @@
 \newcommand{\section}{\@startsection {section}{1}{\z@}
                         {24pt plus3pt minus2pt}
                         {0.0001pt}
-                        {\tensfb}}
+                        {\tensfb\MakeUppercase}}
 \newcommand{\subsection}{\@startsection {subsection}{2}{\z@}
                            {18pt plus2pt minus1pt}
                            {0.0001pt}
@@ -690,16 +694,8 @@
        {\egtsf#1.\quad\ignorespaces#2}\par
      \else
        \hbox to\hsize{\hfil\box\@tempboxa\hfil}%
-   \fi}} % \vskip4pt\global\c@subfigure0}
-% Take out subfigure usepackage subfigure to achieve same result
-%\newcounter{subfigure}
-%\long\def\subcaption#1{%
-%\global\advance\c@subfigure1
-%   \setbox\@tempboxa\hbox{{\egtsfb (\alph{subfigure})\hskip.5em#1}}%
-%   \ifdim \wd\@tempboxa >\hsize
-%       {{\sffamily\fonsize{8}{\baselineskip}
-%       (\alph{subfigure})\hskip.5em\ignorespaces#1\par}}
-%     \else\hbox to\hsize{\hfil\box\@tempboxa\hfil}\fi\par\addvspace{6pt}}
+   \fi}} %
+
 \newbox\tempbox
 \newcommand{\figurebox}[2]{%
             \dimen99=#2
@@ -1070,7 +1066,6 @@
 \def\ps@plain{\let\@mkboth\@gobbletwo
      \def\@oddhead{$\smash{\raise72pt\hbox%
                   {}}$\hfill}%
-                  %{\scriptsize\today\qquad\currenttime}}$\hfill}%
      \def\@oddfoot{\reset@font\rm \hfil\thepage%
      \hfil}%
      \let\@evenhead\@oddhead\let\@evenfoot\@oddfoot}
@@ -1091,7 +1086,6 @@
 \def\ps@plain{\let\@mkboth\@gobbletwo
      \def\@oddhead{$\smash{\raise72pt\hbox%
                   {}}$\hfill}%
-                  %{\scriptsize\today\qquad\currenttime}}$\hfill}%
      \def\@oddfoot{\reset@font\rm\hskip1.55in\hfil\thepage%
      \hfil Copyright\ \ \copyright\ \@confyear\ by ASME}%
      \let\@evenhead\@oddhead\let\@evenfoot\@oddfoot}
