@@ -1,0 +1,987 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass asme2e
+\begin_preamble
+%% The class has several options
+%  onecolumn/twocolumn - format for one or two columns per page
+%  10pt/11pt/12pt - use 10, 11, or 12 point font
+%  oneside/twoside - format for oneside/twosided printing
+%  final/draft - format for final/draft copy
+%  cleanfoot - take out copyright info in footer leave page number
+%  cleanhead - take out the conference banner on the title page
+%  titlepage/notitlepage - put in titlepage or leave out titlepage
+%  
+%% The default is oneside, onecolumn, 10pt, final
+
+%%% Replace here with information related to your conference
+\confshortname{IDETC/CIE 2009}
+\conffullname{the ASME 2009 International Design Engineering Technical Conferences \&\\
+              Computers and Information in Engineering Conference}
+
+%%%%% for date in a single month, use
+%\confdate{24-28}
+%\confmonth{September}
+%%%%% for date across two months, use
+\confdate{August 30-September 2}
+\confyear{2009}
+\confcity{San Diego}
+\confcountry{USA}
+
+%%% Replace DETC2009/MESA-12345 with the number supplied to you 
+%%% by ASME for your paper.
+\papernum{DETC2009/MESA-12345}
+\end_preamble
+\options twocolumn,10pt
+\use_default_options true
+\begin_modules
+logicalmkup
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement t
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize letterpaper
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine natbib_numerical
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 0
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 2
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+An Article Created Using LaTeX and LyX in ASME Format
+\end_layout
+
+\begin_layout Author
+Ryan A.
+ Pavlik
+\begin_inset Flex Affiliation
+status open
+
+\begin_layout Plain Layout
+Human-Computer Interaction Graduate Program
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Notice the ctrl-enters here to not start a new paragraph
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Virtual Reality Application Center
+\begin_inset Newline newline
+\end_inset
+
+Iowa State University
+\begin_inset Newline newline
+\end_inset
+
+Ames, Iowa 50011
+\begin_inset Newline newline
+\end_inset
+
+Email: rpavlik@iastate.edu
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+Judy M.
+ Vance
+\begin_inset Flex Affiliation
+status collapsed
+
+\begin_layout Plain Layout
+Department of Mechanical Engineering
+\begin_inset Newline newline
+\end_inset
+
+Virtual Reality Application Center
+\begin_inset Newline newline
+\end_inset
+
+Iowa State University
+\begin_inset Newline newline
+\end_inset
+
+Ames, Iowa 50011
+\begin_inset Newline newline
+\end_inset
+
+Email: jmvance@iastate.edu
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+
+\shape italic
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\shape italic
+To set the paper number, conference, and other options, please go to the
+ 
+\begin_inset Quotes eld
+\end_inset
+
+LaTeX Preamble
+\begin_inset Quotes erd
+\end_inset
+
+ tab of 
+\family sans
+\shape default
+Document\SpecialChar \menuseparator
+Settings
+\family default
+\SpecialChar \ldots{}
+
+\shape italic
+ 
+\end_layout
+
+\end_inset
+
+This article illustrates preparation of an ASME paper using LyX, a useful
+ graphical editor that produces output using LaTeX.
+ This sample document's text is essentially directly copied from the plain
+ LaTeX sample, but of course, it is edited using LyX instead.
+ An abstract for an ASME paper should be less than 150 words and is normally
+ in italics.
+\end_layout
+
+\begin_layout Abstract
+
+\series bold
+Keywords: 
+\series default
+Virtual assembly, virtual reality, human-computer interaction.
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+This article illustrates preparation of an ASME paper using LyX and LaTeX.
+ It builds on the class and BibTeX style maintained at 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://iel.ucdavis.edu/code/
+\end_layout
+
+\end_inset
+
+.
+ The updates and LyX support are available (in version-control) on 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://github.com/vancegroup/asme-latex
+\end_layout
+
+\end_inset
+
+ .
+ Improvements and suggestions are welcome!
+\end_layout
+
+\begin_layout Standard
+A few changes have been made since v1.7 of the 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+asme2e
+\end_layout
+
+\end_inset
+
+ files.
+ You'll note that in the editor, you don't have to manually put the headings
+ in all-capitals: we can let LaTeX do that for us.
+ Marking the affiliation of authors is a 
+\begin_inset Quotes eld
+\end_inset
+
+text style
+\begin_inset Quotes erd
+\end_inset
+
+ accessible through the right click menu.
+ About the only thing you have to do manually is make sure your captions
+ are in all caps, sans serif, and boldface.
+\end_layout
+
+\begin_layout Section
+Very Very Very Very Very Very Very Very Long Heading
+\end_layout
+
+\begin_layout Standard
+If the heading should run into more than one line, the run-over is flush
+ left.
+\end_layout
+
+\begin_layout Subsection
+Second-Level Heading
+\end_layout
+
+\begin_layout Standard
+The next level of heading is boldface with upper and lower case letters.
+ The heading is flushed left with the left margin.
+ The spacing to the next heading is two line spaces.
+\end_layout
+
+\begin_layout Subsubsection
+Third-Level Heading.
+\end_layout
+
+\begin_layout Standard
+The third-level of heading follows the style of the second-level heading,
+ but it is indented and followed by a period, a space, and the start of
+ corresponding text.
+\end_layout
+
+\begin_layout Section
+Paper Number
+\end_layout
+
+\begin_layout Standard
+ASME assigns each accepted paper with a unique number.
+ Replace 
+\begin_inset Flex Strong
+status collapsed
+
+\begin_layout Plain Layout
+DETC98/DAC-1234
+\end_layout
+
+\end_inset
+
+ in the document preamble with the paper number supplied to you by ASME
+ for your paper.
+\end_layout
+
+\begin_layout Section
+Use of SI Units
+\end_layout
+
+\begin_layout Standard
+An ASME paper should use SI units.
+ When preference is given to SI units, the U.S.
+ customary units may be given in parentheses or omitted.
+ When U.S.
+ customary units are given preference, the SI equivalent 
+\begin_inset Flex Strong
+status collapsed
+
+\begin_layout Plain Layout
+shall
+\end_layout
+
+\end_inset
+
+ be provided in parentheses or in a supplementary table.
+ 
+\end_layout
+
+\begin_layout Section
+Mathematics
+\end_layout
+
+\begin_layout Standard
+Equations should be numbered consecutively beginning with (1) to the end
+ of the paper, including any appendices.
+ The number should be enclosed in parentheses and set flush right in the
+ column on the same line as the equation.
+ An extra line of space should be left above and below a displayed equation
+ or formula.
+ LaTeX can automatically keep track of equation numbers in the paper and
+ format almost any equation imaginable.
+ Numbering and labeling in LyX is done by right-clicking on the equation.
+ An example is shown in Eqn.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ASME"
+
+\end_inset
+
+.
+ The number of a referenced equation in the text should be preceded by Eqn.
+ unless the reference starts a sentence in which case Eqn.
+ should be expanded to Equation.
+\begin_inset Formula 
+\begin{equation}
+f(t)=\int_{0_{+}}^{t}F(t)dt+\frac{dg(t)}{dt}\label{eq:ASME}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Figures and Tables
+\end_layout
+
+\begin_layout Standard
+All figures should be positioned at the top of the page where possible.
+ All figures should be numbered consecutively and captioned; the caption
+ uses all capital letters, and centered under the figure as shown in Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ASME"
+
+\end_inset
+
+.
+ All text within the figure should be no smaller than 7
+\begin_inset space ~
+\end_inset
+
+pt.
+ There should be a minimum two line spaces between figures and text.
+ The number of a referenced figure or table in the text should be preceded
+ by Fig.
+ or Tab.
+ respectively unless the reference starts a sentence in which case Fig.
+ or Tab.
+ should be expanded to Figure or Table.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+unitlength}{0.012500in}%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{picture}(115,35)(255,545)
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+thicklines
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+put(255,545){
+\backslash
+framebox(115,35){}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+put(275,560){Beautiful Figure}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{picture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\family sans
+\series bold
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ASME"
+
+\end_inset
+
+THE FIGURE CAPTION USES CAPITAL LETTERS.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Note that the 
+\begin_inset Quotes eld
+\end_inset
+
+evil red text
+\begin_inset Quotes erd
+\end_inset
+
+ here is just to replicate the other sample's dummy figure.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\family sans
+\series bold
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:ASME"
+
+\end_inset
+
+THE TABLE CAPTION USES CAPITAL LETTERS, TOO.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Example
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Time
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Cost
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+12.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+$1,000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+24
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+$2,000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+All tables should be numbered consecutively and captioned; the caption should
+ use all capital letters, and centered above the table as shown in Table
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:ASME"
+
+\end_inset
+
+.
+ The body of the table should be no smaller than 7 pt.
+ There should be a minimum two line spaces between tables and text.
+\end_layout
+
+\begin_layout Section
+Footnotes
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+protect
+\backslash
+footnotemark
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+footnotetext{Examine the input file to see how a footnote is given in a
+ head.}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Footnotes are referenced with superscript numerals and are numbered consecutivel
+y from 1 to the end of the paper
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Avoid footnotes if at all possible.
+\end_layout
+
+\end_inset
+
+.
+ Footnotes should appear at the bottom of the column in which they are reference
+d.
+\end_layout
+
+\begin_layout Section
+Citing References
+\end_layout
+
+\begin_layout Quotation
+\begin_inset Flex Emph
+status collapsed
+
+\begin_layout Plain Layout
+Text Citation
+\end_layout
+
+\end_inset
+
+.
+ Within the text, references should be cited in numerical order according
+ to their order of appearance.
+ The numbered reference citation should be enclosed in brackets.
+\end_layout
+
+\begin_layout Standard
+The references must appear in the paper in the order that they were cited.
+ In addition, multiple citations (3 or more in the same brackets) must appear
+ as a 
+\begin_inset Quotes eld
+\end_inset
+
+[1-3]
+\begin_inset Quotes erd
+\end_inset
+
+.
+ A complete definition of the ASME reference format can be found in the
+ ASME manual 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "asmemanual"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The bibliography style required by the ASME is unsorted with entries appearing
+ in the order in which the citations appear.
+ If that were the only specification, the standard 
+\shape smallcaps
+Bib
+\shape default
+TeX unsrt bibliography style could be used.
+ Unfortunately, the bibliography style required by the ASME has additional
+ requirements (last name followed by first name, periodical volume in boldface,
+ periodical number inside parentheses, etc.) that are not part of the unsrt
+ style.
+ Therefore, to get ASME bibliography formatting, you must use the 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+asmems4.bst
+\end_layout
+
+\end_inset
+
+ bibliography style file with 
+\shape smallcaps
+Bib
+\shape default
+TeX.
+ This file is not part of the standard 
+\shape smallcaps
+Bib
+\shape default
+TeX distribution so you'll need to place the file someplace where LaTeX
+ can find it (one possibility is in the same location as the file being
+ typeset).
+\end_layout
+
+\begin_layout Standard
+The following technical details about the LaTeX build process are pleasantly
+ optional reading for users of LyX.
+ With LaTeX/
+\shape smallcaps
+Bib
+\shape default
+TeX, LaTeX uses the citation format set by the class file and writes the
+ citation information into the 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+.aux
+\end_layout
+
+\end_inset
+
+ file associated with the LaTeX source.
+ 
+\shape smallcaps
+Bib
+\shape default
+TeX reads the 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+.aux
+\end_layout
+
+\end_inset
+
+ file and matches the citations to the entries in the bibliographic data
+ base file specified in the LaTeX source file by the 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+bibliography
+\end_layout
+
+\end_inset
+
+ command.
+ 
+\shape smallcaps
+Bib
+\shape default
+TeX then writes the bibliography in accordance with the rules in the bibliograph
+y 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+.bst
+\end_layout
+
+\end_inset
+
+ style file to a 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+.bbl
+\end_layout
+
+\end_inset
+
+ file which LaTeX merges with the source text.
+ A good description of the use of 
+\shape smallcaps
+Bib
+\shape default
+TeX can be found in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "latex,goosens"
+
+\end_inset
+
+(see how 2 references are handled?).
+ The following is an example of how three or more references 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "latex,asmemanual,goosens"
+
+\end_inset
+
+ show up using the 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+asmems4.bst
+\end_layout
+
+\end_inset
+
+ bibliography style file in conjunction with the 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+asme2e.cls
+\end_layout
+
+\end_inset
+
+ class file.
+ Here are some more 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "art,blt,ibk,icn,ips,mts,mis,pro,pts,trt,upd"
+
+\end_inset
+
+ which can be used to describe almost any sort of reference.
+\end_layout
+
+\begin_layout Acknowledgments
+Thanks go to D.
+ E.
+ Knuth and L.
+ Lamport for developing the wonderful word processing software packages
+ TeX and LaTeX.
+ I also would like to thank Ken Sprott, Kirk van Katwyk, and Matt Campbell
+ for fixing bugs in the ASME style file 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+asme2e.cls
+\end_layout
+
+\end_inset
+
+, and Geoff Shiflett for creating ASME bibliography style file 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+asmems4.bst
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "sampleasme2e"
+options "asmems4"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
