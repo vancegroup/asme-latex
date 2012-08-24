@@ -11,7 +11,7 @@
 #   make clean
 #   make view - opens the PDF in your PDF viewer.
 
-TARGET = asme2e
+TARGET = sampleasme2e
 
 # check whether pdflatex-makefile submodule is initialized
 ifneq ($(wildcard pdflatex-makefile/Makefile.include),)
