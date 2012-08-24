@@ -1,0 +1,33 @@
+********************************************************************
+   ASME DETC LaTeX Style for LaTeX verson 2e
+********************************************************************
+
+Files included in this distribution:
+
+FAQ            frequently asked questions.
+README         this file
+README2        information about  Postscript Type 1 fonts
+               if you run into trouble with times.sty, mathptm.sty,
+               and pifont.sty.
+asme2e.cls     LaTeX style class package for papers of the American
+               Society of Mechanical Engineers. Questions related to
+               asme2e.cls may be addressed to kvankatw@iel.ucdavis.edu
+asme2e.tex     Sample file which uses the asme2e.cls and documents 
+               some specifications of ASME paper.
+asme2e.ps      Pre-compiled PostScript version of asme2e.tex
+asbstract.tex  Template of the extended abstract of an ASME paper.
+asbstract.ps   Pre-compiled PostScript version of abstract.tex.
+
+
+Note: (1) To get article asme2e in TeX dvi format, type
+             latex asme2e
+             latex asme2e
+
+      (2) The package array is included in the class file asme2e.cls. 
+          See "The LaTeX Companion" book for a description of its use 
+          in compiling tables.
+      (3) The class file asme2e.cls will not produce unnumbered theorems 
+          in the theorem environment.
+      (4) To get unnumbered equations, use the package amslatex
+          in your document.
+
