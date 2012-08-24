@@ -19,6 +19,19 @@
 %     1/1/03    (GRS)   `acm' blended with 'unsrt' and 'apalike' to create
 %                       'asmems4'
 %     8/25/03   (GRS)   removed brackets surrounding month in article citations
+
+%     1/9/05    (GRS)   modified article to:
+
+%                          remove space between volume and (number)
+
+%                          adjust spaces and commas for all number/month combinations
+
+%                          ensure journal is always italicized
+%                       put Thesis Title within quotes instead of italics
+%                       modified proceedings and inproceedings to
+%                          capitalize Vol.
+%                          uncapitalize ed. and eds.
+
 ENTRY
   { address
     author
@@ -292,8 +305,10 @@ FUNCTION {format.editors}
 %    { editor format.names scapify  % ASME doesn't want names scapified,
     { editor format.names           % so don't.
       editor num.names$ #1 >
-	{ ", Eds." * }
-	{ ", Ed." * }
+%	{ ", Eds." * }
+%	{ ", Ed." * }
+	{ ", eds." * }                  % ASME wants ed./eds instead of Ed./Eds.
+	{ ", ed." * }
       if$
     }
   if$
@@ -304,8 +319,10 @@ FUNCTION {format.ineditors}
     { "" }
     { editor format.innames
       editor num.names$ #1 >
-	{ ", Eds." * }
-	{ ", Ed." * }
+%	{ ", Eds." * }
+%	{ ", Ed." * }
+	{ ", eds." * }                 % ASME wants ed./eds instead of Ed./Eds.
+	{ ", ed." * }
       if$
     }
   if$
@@ -385,7 +402,8 @@ FUNCTION {either.or.check}
 FUNCTION {format.bvolume}
 { volume empty$
     { "" }
-    { "vol.~" volume *
+%    { "vol.~" volume *
+    { "Vol.~" volume *        % ASME wants Vol. instead of vol.
       series empty$
 	'skip$
 	{ " of " * series emphasize * }
@@ -471,25 +489,30 @@ FUNCTION {format.journal.vol.num.date}
     { "empty journal in " cite$ * warning$
       ""
     }
-    { journal
-      volume empty$
-	'skip$
-%	{ " " * volume * }
-    { ", {\bf " * volume * "}" * }     % asme wants volume in \bf
-      if$
-      number empty$
-	'emphasizeic
-%	{ emphasize ", " * number * }     % asme doesn't emphasize number
-	{ " (" * number * ")" * }         % asme encloses number inside () instead
-      if$
-      year empty$
-	{ "empty year in " cite$ * warning$ }
-%	{ " (" * format.date * ")" * }   % volume (number) (month) looks awkward
-	{ " " * format.date * " " * }   % so use volume (number) month in asmems4
-      if$
-    }
-  if$
- } % end of journal
+      { journal
+        volume empty$
+	      'skip$
+          { ", {\bf " * volume * "}" * }     % asme wants volume in \bf
+        if$
+        number empty$
+          { month empty$
+
+            { emphasize "" * }
+
+            { emphasize ", " * format.date * }
+
+            if$
+          }
+          { month empty$
+
+            { emphasize "(" * number * ")" * }
+
+            { emphasize "(" * number * "), " * format.date * }
+
+            if$
+          }
+        if$ %end of number empty
+      } % end of journal
 if$ % end of journal empty$
 }
 
@@ -507,6 +530,23 @@ FUNCTION {format.chapter.pages}
     }
   if$
 }
+
+%FUNCTION {format.pages.chapter}
+% This function isn't implemented as of 1/9/2005
+% It's still a copy of format.chapter.pages
+%{ chapter empty$
+%    'format.pp.pages
+%    { type empty$
+%	{ "ch.~" chapter * }
+%	{ type "l" change.case$ chapter tie.or.space.connect }
+%      if$
+%      pages empty$
+%	'skip$
+%	{ ", " * format.pp.pages * }
+%      if$
+%    }
+%  if$
+%}
 
 FUNCTION {format.in.ed.booktitle}
 { booktitle empty$
@@ -860,7 +900,8 @@ FUNCTION {mastersthesis}
   author format.key output				% ASME puts year
   output.year.check					    % after author(s)
   new.block
-  format.title "title" output.check
+%  format.title "title" output.check
+  format.title "title" output.check inquotes % ASME wants title within quotes
   new.block
   "Master's thesis" format.thesis.type output.nonnull
   school "school" output.check
@@ -894,7 +935,8 @@ FUNCTION {phdthesis}
   author format.key output				% ASME puts year
   output.year.check					    % after author(s)
   new.block
-  format.btitle "title" output.check
+%  format.btitle "title" output.check
+  format.title "title" output.check inquotes % ASME wants title within quotes
   new.block
   "PhD thesis" format.thesis.type output.nonnull
   school "school" output.check
