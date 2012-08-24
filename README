@@ -1,9 +1,13 @@
 ********************************************************************
-   ASME DETC LaTeX Style for LaTeX verson 2e
+   ASME Journal paper LaTeX Style for LaTeX verson 2e
 ********************************************************************
 
 ********************************************************************
-Release history: 
+Release history for LaTeX template of ASME Journal paper
+   version 1.0, August 5, 2006. 
+     Files asme2ej.cls and asme2ej.tex modified baesed on
+     files asme2e.cls and asme2e.tex
+Release history for LaTeX template of ASME Conference paper
    version 1.4, May 12, 2005. 
        (1) Modified asme2e.cls to support pdflatex  
        (2) Modified asme2e.cls to support multiple lines in conference name.
@@ -50,28 +54,26 @@ README2        information about  Postscript Type 1 fonts
                and pifont.sty.
 Makefile       a sample Makefile for creating asme2e.pdf and 
                abstract.pdf in Unix.
-asme2e.cls     LaTeX style class package for papers of the American
+asme2ej.cls     LaTeX style class package for papers of the American
                Society of Mechanical Engineers. Questions related to
                asme2e.cls may be addressed to Ken Sprott 
                at kssprott@ucdavis.edu
 asmems4.bst    ASME bibliography style file. Questions related to
                asmems4.bst may be addressed to Geoffrey Shiflett 
                at shiflett@usc.edu          
-asme2e.tex     Sample file which uses the asme2e.cls and documents 
+asme2ej.tex    Sample file which uses the asme2e.cls and documents 
                some specifications of ASME paper.
-asme2e.pdf     PDF file generated from asme2e.tex
-asbstract.tex  Template of the extended abstract of an ASME paper.
-asbstract.pdf  PDF file generated from abstract.tex.
+asme2ej.pdf    PDF file generated from asme2e.tex
 
 
 ********************************************************************
 Note: (1) To get article asme2e in TeX dvi format, type
-             latex asme2e
-             bibtex asme2e
-             latex asme2e
-             dvips -o asme2e.ps asme2e
+             latex asme2ej
+             bibtex asme2ej
+             latex asme2ej
+             dvips -o asme2ej.ps asme2ej
       (2) To get asmee2.pdf file from TeX dvi file, use Adobe Acrobat or type
-             ps2pdf asme2e.ps asme2e.pdf
+             ps2pdf asme2ej.ps asme2ej.pdf
       (2) The package array is included in the class file asme2e.cls. 
           See "The LaTeX Companion" book for a description of its use 
           in compiling tables.
@@ -84,7 +86,7 @@ Note: (1) To get article asme2e in TeX dvi format, type
 Contributors:
    Harry H. Cheng    hhcheng@ucdavis.edu     
            the original creator of the template.
-   Kirk Van Katwyk   
+   Kirk Van Katwyk 
            contributed to asme.sty and asme2e.cls
    Ken Sprott        kssprott@ucdavis.edu      
            contributed asme2e.cls and ASME bibliography 
