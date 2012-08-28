@@ -14,6 +14,8 @@
 ifndef TARGET
 
 all: conference journal
+view: viewconference viewjournal
+clean: cleanconference cleanjournal
 
 conference:
 	$(MAKE) TARGET=sampleasme2e
@@ -29,7 +31,7 @@ viewjournal:
 cleanjournal:
 	$(MAKE) TARGET=sampleasme2ej clean
 
-clean: cleanconference cleanjournal
+.PHONY: all view clean conference journal viewconference cleanconference journal viewjournal cleanjournal
 
 else
 
