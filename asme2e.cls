@@ -7,6 +7,15 @@
 %
 % ---------------------------------------------------------------------------
 %   filename:      asme2e.cls
+%   version 1.7.2, Aug 28, 2012.
+%        (1) Integrated journal samples and class files: pass class option
+%            "journal" to switch to journal mode. This file now incorporates
+%            all content from asme2ej.  Using the \confXX macros in journal
+%            mode displays a warning but doesn't change the output.
+%        (2) Fixed font and capitalization of captions.
+%        (3) Start using package "geometry" to ensure we get the page size
+%            we want.
+%             --- Ryan Pavlik <rpavlik@iastate.edu>
 %   version 1.7.1, Mar 17, 2010.
 %        (1) Remove embedded cite.sty and just use one.
 %        (2) Part and section headings in uppercase.
@@ -50,7 +59,7 @@
 % ---------------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{asme2e}[2012/08/28 v1.7.1 ASME conference/journal paper class]
+\ProvidesClass{asme2e}[2012/08/28 v1.7.2 ASME conference/journal paper class]
 
 \RequirePackage{ifthen}
 \RequirePackage{times}      % Loads the Times-Roman Fonts
