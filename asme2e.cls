@@ -1057,7 +1057,7 @@
    \newcommand\entry[2]{%
        \setbox\tempbox\hbox{##1.\quad}
        \hangindent\wd\tempbox\noindent{##1}\quad\ignorespaces##2\par}
-       \section*{NOMENCLATURE}}{\par\addvspace{12pt}}
+       \section*{\@asme@heading@caps{Nomenclature}}}{\par\addvspace{12pt}}
 
 % Acknowledgement environment
 
