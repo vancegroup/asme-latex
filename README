@@ -9,23 +9,30 @@ Release history:
             this and related classes at
             https://github.com/vancegroup/asme-latex
         (2) Remove abstract.*
-        (3) Replace makefile with one based on 
+        (3) Replace makefile with one based on
             https://github.com/ransford/pdflatex-makefile for better pdflatex
             support.
         (4) Renamed sample files to sampleasme2e.* for clarity.
-             --- Ryan Pavlik <rpavlik@iastate.edu>
+        (5) Integrated journal samples and class files: pass class option
+            "journal" to switch to journal mode.
+        (6) Fixed font and capitalization of captions.
+        (7) Fixed journal sample to use "graphicx" for pdflatex support.
+        (8) Start using package "geometry" for more reliable page sizes.
+        (9) Re-formatted tex source code for examples using fmtlatex:
+            <http://www.math.ntnu.no/~stacey/HowDidIDoThat/LaTeX/fmtlatex>
+                          --- Ryan Pavlik <rpavlik@iastate.edu>
 
    version 1.7.1, Mar 17, 2010. 
         (1) Remove embedded cite.sty and just use one.
         (2) Part and section headings in uppercase.
         (3) Remove commented-out "boatanchors" in favor of version control.
-             --- Ryan Pavlik <rpavlik@iastate.edu>
+                          --- Ryan Pavlik <rpavlik@iastate.edu>
 
    version 1.7, August 1, 2012. 
       (1) added 
        \special{papersize=8.5in,11in}
         to asme2e.tex
-                       --- Hongtai Cheng <h_c45@txstate.edu>
+                          --- Hongtai Cheng <h_c45@txstate.edu>
    version 1.7, Jan 11, 2010. 
       Modified asme2e.cls with the following changes:
        (1) Greek letters in math mode are italicized.
