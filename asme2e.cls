@@ -130,7 +130,7 @@
    \belowdisplayshortskip 3\p@ \@plus\p@ \@minus2\p@
    \def\@listi{\leftmargin\leftmargini
                \topsep 3\p@ \@plus\p@ \@minus\p@
-               \parsep \z@ 
+               \parsep \z@
                \itemsep \parsep}%
    \belowdisplayskip \abovedisplayskip}
 \newcommand\scriptsize{\@setfontsize\scriptsize\@viipt{8}}
