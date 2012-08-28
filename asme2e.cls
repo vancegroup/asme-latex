@@ -344,6 +344,18 @@
 \newcommand\bb{\fontfamily{msbm}\selectfont}
 \newcommand\bi{\fontseries{bc}\fontshape{it}\selectfont}
 
+\ifthenelse{\boolean{@asme@journal}} {
+  % JOURNAL PAPER
+  \typeout{ASME Journal Paper}
+  \newcommand\@asme@heading@caps{}
+  \newcommand\@asme@heading@font{\rmbf}
+} {
+  % CONFERENCE PAPER
+  \typeout{ASME Conference Paper}
+  \newcommand\@asme@heading@caps{\MakeUppercase}
+  \newcommand\@asme@heading@font{\tensfb}
+} % end of journal/conference conditional
+
 % -----------------------------------------------------------
 %                 Page Layout
 % -----------------------------------------------------------
