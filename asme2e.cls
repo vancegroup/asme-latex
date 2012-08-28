@@ -321,7 +321,10 @@
 \DeclareFixedFont{\twlsfb}{OT1}{phv}{b}{n}{12}
 \DeclareFixedFont{\tensfb}{OT1}{phv}{b}{n}{10}
 \DeclareFixedFont{\tensf}{OT1}{phv}{m}{n}{10}
+\DeclareFixedFont{\phvtf}{OT1}{phv}{b}{n}{18}
 
+
+\DeclareOldFontCommand{\rmbf}{\normalfont\rmfamily\bf}{\mathrm}
 \DeclareOldFontCommand{\rm}{\normalfont\rmfamily}{\mathrm}
 \DeclareOldFontCommand{\sf}{\normalfont\sffamily}{\mathsf}
 \DeclareOldFontCommand{\tt}{\normalfont\ttfamily}{\mathtt}
