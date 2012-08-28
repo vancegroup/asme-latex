@@ -362,28 +362,47 @@
 
 \setlength{\paperheight}{11in}
 \setlength{\paperwidth}{8.5in}
-\setlength{\oddsidemargin}{48pt}
-\setlength{\evensidemargin}{48pt}
-% Added by Matt Campbell to make compatible with pdflatex 3/8/2005
-\ifpdf%
-   \setlength{\topmargin}{1.3in}% use 1.3in top margin for pdflatex
-\else
-   \setlength{\topmargin}{2.0in}% use 2.0in top marging for latex - same as original
-\fi
-% End pdflatex section
+\ifthenelse{\boolean{@asme@journal}} {
+  % JOURNAL PAPER
+  \setlength{\oddsidemargin}{0.925in}
+  \setlength{\evensidemargin}{0.925in}
+  % Added by Matt Campbell to make compatible with pdflatex 3/8/2005
+  \ifpdf%
+     \setlength{\topmargin}{0.8in}
+  \else
+     \setlength{\topmargin}{1.5in}
+  \fi
+  % End pdflatex section
+
+   \setlength{\columnsep}{.17in}
+   \setlength{\textheight}{10.00in}
+   \setlength{\textwidth}{6.85in}
+} {
+  % CONFERENCE PAPER
+  \setlength{\oddsidemargin}{48pt}
+  \setlength{\evensidemargin}{48pt}
+  % Added by Matt Campbell to make compatible with pdflatex 3/8/2005
+  \ifpdf%
+     \setlength{\topmargin}{1.3in}% use 1.3in top margin for pdflatex
+  \else
+     \setlength{\topmargin}{2.0in}% use 2.0in top marging for latex - same as original
+  \fi
+  % End pdflatex section
+
+   \setlength{\columnsep}{.375in}
+   \setlength{\textheight}{9.00in}
+   \setlength{\textwidth}{7.5in}
+} % end of journal/conference conditional
 \setlength{\marginparwidth}{0pt}
 \setlength{\marginparsep}{11pt}
 \setlength{\marginparpush}{5pt}
-\setlength{\columnsep}{.375in}
 \setlength{\columnseprule}{0pt}
 \setlength{\headheight}{10pt}
 \setlength{\headsep}{18pt}
 \setlength{\topskip}{10pt}
 \setlength{\footskip}{24pt}
-\setlength{\textheight}{9.00in}
 \advance\textheight by -\headheight
 \advance\textheight by -\headsep
-\setlength{\textwidth}{7.5in}
 \setlength{\footnotesep}{6.65pt}
 \setlength{\skip\footins}{9pt plus4pt minus 2pt}
 \setlength{\floatsep}{18pt plus2pt minus2pt}
