@@ -591,7 +591,7 @@
        \Large\bfseries \partname~\thepart
        \par\nobreak
      \fi
-     \huge \bfseries \MakeUppercase{#2}%
+     \huge \bfseries \@asme@heading@caps{#2}%
      \markboth{}{}\par}%
     \nobreak
     \vskip 3ex
@@ -600,7 +600,7 @@
     {\parindent \z@ \raggedright
      \interlinepenalty \@M
      \normalfont
-     \huge \bfseries \MakeUppercase{#1}\par}%
+     \huge \bfseries \@asme@heading@caps{#1}\par}%
      \nobreak
      \vskip 3ex
      \@afterheading}
@@ -619,11 +619,11 @@
 \newcommand{\section}{\@startsection {section}{1}{\z@}
                         {24pt plus3pt minus2pt}
                         {0.0001pt}
-                        {\tensfb\MakeUppercase}}
+                        {\@asme@heading@font\@asme@heading@caps}}
 \newcommand{\subsection}{\@startsection {subsection}{2}{\z@}
                            {18pt plus2pt minus1pt}
                            {0.0001pt}
-                           {\tensfb}}
+                           {\@asme@heading@font}}
 \newcommand{\subsubsection}{\@startsection {subsubsection}{3}{\parindent}
                            {18pt plus2pt minus1pt}
                            {-1em}
@@ -720,7 +720,7 @@
 \newcommand\tablename{Table}
 \newcommand\partname{Part}
 \newcommand\appendixname{APPENDIX}
-\newcommand\refname{REFERENCES}
+\newcommand\refname{\@asme@heading@caps{References}}
 \newcommand\contentsname{CONTENTS}
 
 
@@ -745,7 +745,7 @@
 \def\fps@figure{tbp}
 \def\ftype@figure{1}
 \def\ext@figure{lof}
-\def\fnum@figure{\small\textbf{\textsf{\MakeUppercase{\figurename~\thefigure}}}}
+\def\fnum@figure{\small\textbf{\textsf{\@asme@heading@caps{\figurename~\thefigure}}}}
 \newenvironment{figure}
                {\@float{figure}}
                {\end@float}
@@ -757,7 +757,7 @@
 \def\fps@table{tbp}
 \def\ftype@table{2}
 \def\ext@table{lot}
-\def\fnum@table{\small\textbf{\textsf{\MakeUppercase{\tablename~\thetable}}}}
+\def\fnum@table{\small\textbf{\textsf{\@asme@heading@caps{\tablename~\thetable}}}}
 \newenvironment{table}{%
             \small
             \renewcommand{\arraystretch}{1.5}
