@@ -77,6 +77,13 @@ in ASME Format for Testing Your Figures}
 %%% Convenience command since this document includes "BibTeX" many times
 \newcommand\BibTeX{{\sc Bib}\TeX}
 
+%%% pdflatex-makefile creates this file, to record revisions used.
+\IfFileExists{revision.tex} {
+    \input{revision}
+} {
+    \newcommand{\Revision}{\it{UNKNOWN}}
+}
+
 \begin{document}
 
 \maketitle    
@@ -87,8 +94,8 @@ in ASME Format for Testing Your Figures}
 This article illustrates preparation of ASME paper using 
 \LaTeX2\raisebox{-.3ex}{$\epsilon$}.
 An abstract for an ASME paper should be less than 150 words and is normally in italics.
-%%% 
-Please use this template to test how your figures will look on the printed journal page of the Journal of Mechanical Design.  The Journal will no longer publish papers that contain errors in figure resolution.  These usually consist of unreadable or fuzzy text, and pixilation or rasterization of lines.  This template identifies the specifications used by JMD some of which may not be easily duplicated; for example, ASME actually uses Helvetica Condensed Bold, but this is not generally available so for the purpose of this exercise Helvetica is adequate.  However, reproduction of the journal page is not the goal, instead this exercise is to verify the quality of your figures. Notice that this abstract is to be set in 9pt Times Italic, single spaced and right justified.  
+%%%
+Please use this template\footnote{This output was generated from Git revision \texttt{\Revision}} to test how your figures will look on the printed journal page of the Journal of Mechanical Design.  The Journal will no longer publish papers that contain errors in figure resolution.  These usually consist of unreadable or fuzzy text, and pixilation or rasterization of lines.  This template identifies the specifications used by JMD some of which may not be easily duplicated; for example, ASME actually uses Helvetica Condensed Bold, but this is not generally available so for the purpose of this exercise Helvetica is adequate.  However, reproduction of the journal page is not the goal, instead this exercise is to verify the quality of your figures. Notice that this abstract is to be set in 9pt Times Italic, single spaced and right justified.  
 }
 \end{abstract}
 
