@@ -925,8 +925,15 @@
 \else
   \newenvironment{abstract}{%
      \if@twocolumn
-        \normalsize\par\addvspace{12pt}\noindent
-        {\tensfb ABSTRACT}\par
+        \ifthenelse{\boolean{@asme@journal}} {
+           % Journal paper
+           \normalsize\noindent
+           \noindent
+         } {
+           % Conference paper
+           \normalsize\par\addvspace{12pt}\noindent
+           {\tensfb ABSTRACT}\par
+         } % end of journal/conference conditional
      \else
         \begin{center}
           {{\tensfb ABSTRACT}\vspace{-.5em}\vspace{\z@}}
