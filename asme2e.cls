@@ -887,17 +887,29 @@
    \hbox to 46pt{\vbox to 46pt{\vss\hsize46pt\vss}}\end{tabular}\hss
   \vbox{\hsize37pc\scriptsize\sf\vskip\baselineskip%
   \bannerfnt\begin{flushright}% added flushright to properly wrap long conference names
-  \hfill Proceedings of \@conffullname\par
-  \hfill \@confshortname\par
-  \hfill \@confmonth\ \@confdate, \@confyear, \@confcity, \@confcountry
+  \ifthenelse{\boolean{@asme@journal}} {} {
+     % Conference paper only
+     \hfill Proceedings of \@conffullname\par
+     \hfill \@confshortname\par
+     \hfill \@confmonth\ \@confdate, \@confyear, \@confcity, \@confcountry
 
-  \vskip.5in
+     \vskip.5in
+  } % end of journal/conference conditional
+
   \hfill {\pnumfnt\@papernum}\end{flushright}}
   \hskip1pc}}
-  \vskip.15in%.25in original value w/out flushright
-  \vskip .25pc{\large\twlsfb
-               \begin{center}\leftskip.5in plus1fill\rightskip\leftskip
-               \@title\par\end{center}}
+  \ifthenelse{\boolean{@asme@journal}} {
+     % Journal paper
+     \vskip .5pc{\Large\phvtf
+                  \begin{center}\leftskip.5in plus1fill\rightskip\leftskip
+                  \@title\par\end{center}}
+  } {
+     % Conference paper
+     \vskip.15in%.25in original value w/out flushright
+     \vskip .25pc{\large\twlsfb
+                  \begin{center}\leftskip.5in plus1fill\rightskip\leftskip
+                  \@title\par\end{center}}
+  } % end of journal/conference conditional
   \vskip2pc{\begin{center}\@author\par\end{center}}\vskip12pt}
 \fi
 
