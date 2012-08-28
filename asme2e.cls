@@ -1152,10 +1152,13 @@
 \else
  \def\ps@myheadings{%
      \let\@mkboth\@gobbletwo
-     \def\@oddfoot{\hskip1.55in\hfil\thepage\hfil Copyright\ \ \copyright\ \@confyear%
-    ~by ASME}%
-     \def\@evenfoot{\hskip1.55in\hfil\thepage\hfil Copyright\ \ \copyright\ \@confyear%
-    ~by ASME}%
+     \ifthenelse{\boolean{@asme@journal}} {} {
+         % CONFERENCE PAPER
+        \def\@oddfoot{\hskip1.55in\hfil\thepage\hfil Copyright\ \ \copyright\ \@confyear%
+       ~by ASME}%
+        \def\@evenfoot{\hskip1.55in\hfil\thepage\hfil Copyright\ \ \copyright\ \@confyear%
+       ~by ASME}%
+     } % end of journal/conference conditional
 
     \let\@oddhead\@empty
     \let\@evenhead\@empty
@@ -1165,8 +1168,11 @@
 \def\ps@plain{\let\@mkboth\@gobbletwo
      \def\@oddhead{$\smash{\raise72pt\hbox%
                   {}}$\hfill}%
-     \def\@oddfoot{\reset@font\rm\hskip1.55in\hfil\thepage%
-     \hfil Copyright\ \ \copyright\ \@confyear\ by ASME}%
+     \ifthenelse{\boolean{@asme@journal}} {} {
+        % CONFERENCE PAPER
+        \def\@oddfoot{\reset@font\rm\hskip1.55in\hfil\thepage%
+        \hfil Copyright\ \ \copyright\ \@confyear\ by ASME}%
+     } % end of journal/conference conditional
      \let\@evenhead\@oddhead\let\@evenfoot\@oddfoot}
 
 \fi
