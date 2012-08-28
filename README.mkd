@@ -1,0 +1,219 @@
+# ASME LaTeX Class for LaTeX verson 2e
+
+Original source maintained at <http://iel.ucdavis.edu/code/ASME>
+
+Unofficial enhancements hosted at <https://github.com/vancegroup/asme-latex>
+
+## Release history:
+
+### version 1.7.2, Aug 28, 2012.
+- Posted Git repository of current and historical versions of
+  this and related classes at
+  <https://github.com/vancegroup/asme-latex>
+
+- Remove `abstract.*` files
+
+- Replace makefile with one based on
+  <https://github.com/ransford/pdflatex-makefile> for better pdflatex
+  support.
+
+- Renamed sample files to sampleasme2e.* for clarity.
+
+- Integrated journal samples and class files: pass class option
+  `journal` to switch to journal mode.
+
+- Fixed font and capitalization of captions.
+
+- Fixed journal sample to use "graphicx" for pdflatex support.
+
+- Start using package "geometry" for more reliable page sizes.
+
+- Re-formatted tex source code for examples using fmtlatex:
+  <http://www.math.ntnu.no/~stacey/HowDidIDoThat/LaTeX/fmtlatex>
+
+- Converted README file to Markdown text format for formatting on GitHub
+  repository homepage.
+
+*Updated by*: Ryan Pavlik <rpavlik@iastate.edu>
+
+### version 1.7.1, Mar 17, 2010.
+- Remove embedded `cite.sty` and just use one.
+
+- Part and section headings in uppercase.
+
+- Remove commented-out "boatanchors" in favor of version control.
+
+*Updated by*: Ryan Pavlik <rpavlik@iastate.edu>
+
+### version 1.7, August 1, 2012.
+- added `\special{papersize=8.5in,11in}` to asme2e.tex
+
+*Updated by*: Hongtai Cheng <h_c45@txstate.edu>
+
+### version 1.7, Jan 11, 2010.
+Modified `asme2e.cls` with the following changes:
+
+- Greek letters in math mode are italicized.
+
+- Figure captions are in uppercase bold sans serif font of 9 points.
+
+- The defined commands `\hour` `\minute` conflict with the commands
+  `\hour` and `\minute` in the approved package `SIunits`. They were
+  changed to `\thour` and `\tminute`.
+
+*Updated by*: Marc LaViolette <laviolette-m@rmc.ca>
+
+### version 1.6, May 24, 2009.
+- Modified `asmems4.bst` to use `\textbf` for handling boldface.
+
+*Updated by*: Tim Lahey <tjlahey@cgl.uwaterloo.ca>
+
+### version 1.5, January 12, 2009.
+- Modified `asme2e.tex` to use a new header
+
+- Modified `asme2e.cls` to use a new header
+
+*Updated by*: Harry H. Cheng <hhcheng@ucdavis.edu>
+
+### version 1.4, May 12, 2005.
+- Modified `asme2e.cls` to support pdflatex
+
+- Modified `asme2e.cls` to support multiple lines in conference name.
+  `asme2e.tex` modified with a conference with multiple lines.
+
+*Updated by*: <matthew.campbell@goodrich.com>
+
+### version 1.3, Januaray 9, 2005.
+- Top margin of the layout changed in `asme2e.cls`. `asme2e.cls1.2` is for
+  ASME DETC template version 1.2.
+
+- Updated `asmms4.bst` to conform the ASME reference format. It fixes 2
+  items in the article format: 1) a extraneous space after number or
+  month was removed, and 2) an incorrect font style that occurred for
+  one particular combination of number and month data was corrected. It
+  also adjusts capitalization in proceedings entries to correspond to
+  the latest ASME reference format. The current ASME reference format
+  still does not completely resolve all formatting issues. In
+  particular, the sample bibliography uses roman style for journal names
+  in an article citation, but the reference format doesn't actually
+  specify a style for the journal name. Since there's some ambiguity
+  here, I left the journal name italicized.
+
+*Updated by*: Geoffrey Shiflett <shiflett@usc.edu>
+
+### version 1.2, August 28, 2003.
+- updated asme2e.cls. The 1st page heading is
+  location, date instead of the reverse.
+
+### version 1.2, August 26, 2003.
+- updated ASME bibliography style file asmems4.bst.
+- removed brackets surrounding month in article citations
+
+### version 1.2, January 25, 2003.
+- support the modified ASME bibliography style
+
+### version 1.1, February 16, 2001
+- support new ASME bibliography style
+
+### No version num, May 7, 1994
+- the initial distribution of the template
+
+
+## Files included in this distribution:
+
+### Documentation
+
+- `README.mkd`: this file
+
+- `FAQ`: frequently asked questions.
+
+- `README2`: information about Postscript Type 1 fonts if you run into
+  trouble with `times.sty`, `mathptmx.sty`, and `pifont.sty`.
+
+### Files used to create ASME-format papers
+
+- `asme2e.cls`: LaTeX document class for papers of the American
+  Society of Mechanical Engineers. Supports both conference papers
+  (default) and journal papers (pass class option `journal`). Questions
+  related to `asme2e.cls` may be addressed to Ken Sprott at
+  <sprottk@gaia.ecs.csus.edu>
+
+- `asme2e.layout`: LyX document layout file to add support for the
+  `asme2e` class. Questions related to `asme2e.layout` may be addressed
+  to Ryan A. Pavlik at <rpavlik@iastate.edu>
+
+- `asmems4.bst`: ASME bibliography style file. Questions related to
+  asmems4.bst may be addressed to Geoffrey Shiflett at
+  <shiflett@usc.edu>
+
+### Samples and supporting files
+
+- `sampleasme2e.tex`: Sample "conference paper" which uses
+  `asme2e.cls` and documents some specifications of an ASME conference
+  paper.
+
+- `sampleasme2e.pdf`: PDF file generated from `sampleasme2e.tex`
+
+- `sampleasme2ej.tex`: Sample "journal paper" which uses the
+  `asme2e.cls` and documents some specifications of an ASME journal
+  paper, particularly emphasizing the issue of figures.
+
+- `sampleasme2ej.pdf`: PDF file generated from `sampleasme2ej.tex`
+
+- `lyx-sample.lyx`: Sample LyX document using `asme2e.layout` and
+  `asme2e.cls`, with content based on `sampleasme2e.tex`.
+
+- `sampleasme2e.bib`: BibTeX file containing mostly dummy entries,
+  shared by `sampleasme2e.tex`, `sampleasme2ej.tex`, and `lyx-sample.lyx`.
+
+- `figure/*`: Figures used by `sampleasme2ej.tex`
+
+- `Makefile`: a Makefile for creating pdf files from the two `.tex`
+  sample documents
+
+- `pdflatex-makefile/*`: A third-party makefile include that simplifies
+  building PDF files using `pdflatex` - see
+  <https://github.com/ransford/pdflatex-makefile>
+
+
+## Notes
+- The package `array` is included in the class file `asme2e.cls`. See
+  "The LaTeX Companion" book for a description of its use in compiling
+  tables.
+
+- The class file asme2e.cls will not produce unnumbered theorems in the
+  theorem environment.
+
+- To get unnumbered equations, use the package `amslatex` in your
+  document.
+
+## Contributors:
+- Harry H. Cheng <hhcheng@ucdavis.edu>
+
+  - the original creator of the template.
+
+- Kirk Van Katwyk
+
+  - contributed to `asme.sty` and `asme2e.cls`
+
+- Ken Sprott <sprottk@gaia.ecs.csus.edu>
+
+  - contributed `asme2e.cls` and ASME bibliography
+
+- Geoffrey Shiflett <shiflett@usc.edu>
+
+  - created ASME bibliography style file `asmems4.bst` with details
+    explained in `sampleasme2e.tex`.
+
+- Matt Campbell <matthew.campbell@goodrich.com>
+
+  - modified `asme2e.cls` to support pdflatex and conference name with
+    multiple lines.
+
+- Ryan Pavlik <rpavlik@iastate.edu>
+
+  - modified `asme2e.cls` to merge the conference and journal paper
+  classes, improve font and case handling in headings and captions, and
+  not embed an outdated `cite.sty`. Created `asme2e.layout` and
+  `lyx-sample.lyx` for document composition in LyX.
+
