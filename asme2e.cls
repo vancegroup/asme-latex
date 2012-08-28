@@ -624,10 +624,20 @@
                            {18pt plus2pt minus1pt}
                            {0.0001pt}
                            {\@asme@heading@font}}
-\newcommand{\subsubsection}{\@startsection {subsubsection}{3}{\parindent}
-                           {18pt plus2pt minus1pt}
-                           {-1em}
-                           {\tensfb}}
+\ifthenelse{\boolean{@asme@journal}} {
+  % JOURNAL PAPER
+  \newcommand{\subsubsection}{\@startsection {subsubsection}{3}{\z@}
+                             {18pt plus2pt minus1pt}
+                             {0.0001pt}
+                             {\@asme@heading@font}}
+} {
+  % CONFERENCE PAPER
+  \newcommand{\subsubsection}{\@startsection {subsubsection}{3}{\parindent}
+                             {18pt plus2pt minus1pt}
+                             {-1em}
+                             {\@asme@heading@font}}
+} % end of journal/conference conditional
+
 \newcommand{\paragraph}{\@startsection {paragraph}{4}{\z@}
                           {12pt plus2pt minus1pt}
                           {-1em}
