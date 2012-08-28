@@ -50,7 +50,7 @@
 % ---------------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{asme2e}[2010/03/17 v1.7.1 ASME conference paper class]
+\ProvidesClass{asme2e}[2012/08/28 v1.7.1 ASME conference/journal paper class]
 
 \RequirePackage{ifthen}
 \RequirePackage{times}      % Loads the Times-Roman Fonts
