@@ -2,25 +2,25 @@
 % 	for LaTeX version 2e - 3/17/10
 %
 % WARNING: This is an unauthorized class file. It has not been thoroughly
-% tested so it probably still has bugs. We will do our best to fix them when 
+% tested so it probably still has bugs. We will do our best to fix them when
 % found.
 %
 % ---------------------------------------------------------------------------
 %   filename:      asme2e.cls
-%   version 1.7.1, Mar 17, 2010. 
+%   version 1.7.1, Mar 17, 2010.
 %        (1) Remove embedded cite.sty and just use one.
 %        (2) Part and section headings in uppercase.
 %        (3) Remove commented-out "boatanchors" in favor of version control.
 %             --- Ryan Pavlik <rpavlik@iastate.edu>
-%   version 1.6, Jan 11, 2010. 
+%   version 1.6, Jan 11, 2010.
 %        (1) Greek letters in math mode are italicized.
 %        (2) Figure captions are in uppercase bold sans serif font of 9 points.
-%        (3) The defined commands \hour \minute conflict with the commands 
-%              \hour and minute in the approved package SIunits.  
+%        (3) The defined commands \hour \minute conflict with the commands
+%              \hour and minute in the approved package SIunits.
 %              They were changed to \thour and \tminute.
 %             --- Marc LaViolette <laviolette-m@rmc.ca>
-%   version 1.4, May 12, 2005. 
-%        (1) Modified asme2e.cls to support pdflatex  
+%   version 1.4, May 12, 2005.
+%        (1) Modified asme2e.cls to support pdflatex
 %        (2) Modified asme2e.cls to support multiple lines in conference name.
 %             --- Matt Campbell mtycampbell@ucdavis.edu
 %   version:       1.2
@@ -40,11 +40,11 @@
 %		      The default is now 10pt.
 %		   3. Add support for the new reference format required by
 %		      ASME. This requires the use of Bibtex.
-%                  4. Eliminate the subfigure code held over from the original 
+%                  4. Eliminate the subfigure code held over from the original
 %                     ASME style file. Usepackage subfigure instead.
 %                  5. Add cleanhead option to eliminate the banner on the title
 %                     page.
-%                  6. Add cleanfoot option to eliminate the copyright on each 
+%                  6. Add cleanfoot option to eliminate the copyright on each
 %                     footer.
 %   usage:         \documentclass[options]{asme2e}
 % ---------------------------------------------------------------------------
@@ -94,7 +94,7 @@
 
 
 % ------------------------------------------------------
-%                Font and Size Definitions 
+%                Font and Size Definitions
 % ------------------------------------------------------
 
 \setlength\lineskip{1\p@}
@@ -109,8 +109,8 @@
 \renewcommand\normalsize{%
    \@setfontsize\normalsize\@xpt{12}%
    \abovedisplayskip 18\p@ \@plus2\p@ \@minus5\p@
-   \abovedisplayshortskip \abovedisplayskip 
-   \belowdisplayshortskip \abovedisplayskip 
+   \abovedisplayshortskip \abovedisplayskip
+   \belowdisplayshortskip \abovedisplayskip
    \belowdisplayskip \abovedisplayskip
    \let\@listi\@listI}
 \normalsize
@@ -671,7 +671,7 @@
 % ------------------------------------------------------------------------
 %                         Tables and Figures
 % ------------------------------------------------------------------------
-\setcounter{topnumber}{4}         % These change the float placement 
+\setcounter{topnumber}{4}         % These change the float placement
 \renewcommand{\topfraction}{.9}
 \setcounter{bottomnumber}{4}
 \renewcommand{\bottomfraction}{.9}
@@ -680,7 +680,7 @@
 \renewcommand{\floatpagefraction}{.901}
 \setcounter{dbltopnumber}{4}
 \renewcommand{\dbltopfraction}{.9}
-\renewcommand{\dblfloatpagefraction}{.91}         
+\renewcommand{\dblfloatpagefraction}{.91}
 
 \newcommand\figurename{Figure}
 \newcommand\tablename{Table}
@@ -872,7 +872,7 @@
         \quotation
      \fi}
      {\if@twocolumn\else\endquotation\fi}
-\fi 
+\fi
 
 % Get the multiple author set
 
@@ -931,7 +931,7 @@
      \end{tabular}}}
 
 % ---------------------------------------------------------------------------
-%                           Bibliography 
+%                           Bibliography
 % ---------------------------------------------------------------------------
 
 \newcommand\appendix{\par
@@ -1018,7 +1018,7 @@
   \def\@proof{\trivlist \item[\hskip \labelsep{\it Proof.}]}
   \def\@optargproof[#1]{\trivlist \item[\hskip \labelsep{\it #1.}]}
   \def\endproof{\endtrivlist}
-  \def\qed{\vskip-\lastskip\vskip-\baselineskip\hbox to \hsize{\hfill$\Box$}} 
+  \def\qed{\vskip-\lastskip\vskip-\baselineskip\hbox to \hsize{\hfill$\Box$}}
 }
 
 
@@ -1095,7 +1095,7 @@
 
 \fi
 
- 
+
 
 
 \mark{{}{}}
