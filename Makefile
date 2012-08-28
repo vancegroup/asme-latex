@@ -11,7 +11,27 @@
 #   make clean
 #   make view - opens the PDF in your PDF viewer.
 
-TARGET = sampleasme2e
+ifndef TARGET
+
+all: conference journal
+
+conference:
+	$(MAKE) TARGET=sampleasme2e
+viewconference:
+	$(MAKE) TARGET=sampleasme2e view
+cleanconference:
+	$(MAKE) TARGET=sampleasme2e clean
+
+journal:
+	$(MAKE) TARGET=sampleasme2ej
+viewjournal:
+	$(MAKE) TARGET=sampleasme2ej view
+cleanjournal:
+	$(MAKE) TARGET=sampleasme2ej clean
+
+clean: cleanconference cleanjournal
+
+else
 
 # check whether pdflatex-makefile submodule is initialized
 ifneq ($(wildcard pdflatex-makefile/Makefile.include),)
@@ -25,4 +45,6 @@ setup:
       cd "$(shell git rev-parse --show-toplevel)" && git submodule init \
               && git submodule update
 ##### end submodule action
+endif
+
 endif
