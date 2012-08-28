@@ -1054,8 +1054,15 @@
 
 % Acknowledgement environment
 
-\newenvironment{acknowledgment}{%
-   \section*{ACKNOWLEDGMENT}}{\par\addvspace{12pt}}
+\ifthenelse{\boolean{@asme@journal}} {
+  % JOURNAL PAPER
+   \newenvironment{acknowledgment}{%
+   \section*{\@asme@heading@caps{Acknowledgements}}}{\par\addvspace{12pt}}
+} {
+  % CONFERENCE PAPER
+   \newenvironment{acknowledgment}{%
+   \section*{\@asme@heading@caps{Acknowledgement}}}{\par\addvspace{12pt}}
+} % end of journal/conference conditional
 
 % The following are the new theorem definitions
 
