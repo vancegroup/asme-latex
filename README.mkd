@@ -4,9 +4,9 @@ Original source maintained at <http://iel.ucdavis.edu/code/ASME>
 
 Unofficial enhancements hosted at <https://github.com/vancegroup/asme-latex>
 
-## Release history:
+## Release history
 
-### version 1.7.2, Aug 28, 2012.
+### version 1.7.2, Aug 28, 2012
 - Posted Git repository of current and historical versions of
   this and related classes at
   <https://github.com/vancegroup/asme-latex>
@@ -36,7 +36,7 @@ Unofficial enhancements hosted at <https://github.com/vancegroup/asme-latex>
 
 *Updated by*: Ryan Pavlik <rpavlik@iastate.edu>
 
-### version 1.7.1, Mar 17, 2010.
+### version 1.7.1, Mar 17, 2010
 - Remove embedded `cite.sty` and just use one.
 
 - Part and section headings in uppercase.
@@ -45,12 +45,12 @@ Unofficial enhancements hosted at <https://github.com/vancegroup/asme-latex>
 
 *Updated by*: Ryan Pavlik <rpavlik@iastate.edu>
 
-### version 1.7, August 1, 2012.
+### version 1.7, August 1, 2012
 - added `\special{papersize=8.5in,11in}` to asme2e.tex
 
 *Updated by*: Hongtai Cheng <h_c45@txstate.edu>
 
-### version 1.7, Jan 11, 2010.
+### version 1.7, Jan 11, 2010
 Modified `asme2e.cls` with the following changes:
 
 - Greek letters in math mode are italicized.
@@ -63,19 +63,19 @@ Modified `asme2e.cls` with the following changes:
 
 *Updated by*: Marc LaViolette <laviolette-m@rmc.ca>
 
-### version 1.6, May 24, 2009.
+### version 1.6, May 24, 2009
 - Modified `asmems4.bst` to use `\textbf` for handling boldface.
 
 *Updated by*: Tim Lahey <tjlahey@cgl.uwaterloo.ca>
 
-### version 1.5, January 12, 2009.
+### version 1.5, January 12, 2009
 - Modified `asme2e.tex` to use a new header
 
 - Modified `asme2e.cls` to use a new header
 
 *Updated by*: Harry H. Cheng <hhcheng@ucdavis.edu>
 
-### version 1.4, May 12, 2005.
+### version 1.4, May 12, 2005
 - Modified `asme2e.cls` to support pdflatex
 
 - Modified `asme2e.cls` to support multiple lines in conference name.
@@ -83,7 +83,7 @@ Modified `asme2e.cls` with the following changes:
 
 *Updated by*: <matthew.campbell@goodrich.com>
 
-### version 1.3, Januaray 9, 2005.
+### version 1.3, Januaray 9, 2005
 - Top margin of the layout changed in `asme2e.cls`. `asme2e.cls1.2` is for
   ASME DETC template version 1.2.
 
@@ -101,15 +101,15 @@ Modified `asme2e.cls` with the following changes:
 
 *Updated by*: Geoffrey Shiflett <shiflett@usc.edu>
 
-### version 1.2, August 28, 2003.
+### version 1.2, August 28, 2003
 - updated asme2e.cls. The 1st page heading is
   location, date instead of the reverse.
 
-### version 1.2, August 26, 2003.
+### version 1.2, August 26, 2003
 - updated ASME bibliography style file asmems4.bst.
 - removed brackets surrounding month in article citations
 
-### version 1.2, January 25, 2003.
+### version 1.2, January 25, 2003
 - support the modified ASME bibliography style
 
 ### version 1.1, February 16, 2001
@@ -119,7 +119,7 @@ Modified `asme2e.cls` with the following changes:
 - the initial distribution of the template
 
 
-## Files included in this distribution:
+## Files included in this distribution
 
 ### Documentation
 
@@ -187,7 +187,7 @@ Modified `asme2e.cls` with the following changes:
 - To get unnumbered equations, use the package `amslatex` in your
   document.
 
-## Contributors:
+## Contributors
 - Harry H. Cheng <hhcheng@ucdavis.edu>
 
   - the original creator of the template.
