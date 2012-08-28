@@ -62,6 +62,7 @@
 \newcommand\@ptsize{}
 \newboolean{@cleanfoot}
 \newboolean{@cleanhead}
+\newboolean{@asme@journal}
 
 % -------------------------------------------------------
 %                   Options
@@ -76,11 +77,13 @@
 \DeclareOption{twocolumn}{\@twocolumntrue}
 \DeclareOption{cleanfoot}{\@cleanfoottrue}
 \DeclareOption{cleanhead}{\@cleanheadtrue}
+\DeclareOption{journal}{\setboolean{@asme@journal}{true}}
+\DeclareOption{conference}{\setboolean{@asme@journal}{false}}
 \DeclareOption{10pt}{\renewcommand\@ptsize{0}} % Corresponds to 10pt font
 \DeclareOption{11pt}{\renewcommand\@ptsize{1}} % Corresponds to 11pt font
 \DeclareOption{12pt}{\renewcommand\@ptsize{2}} % Corresponds to 12pt font
 
-\ExecuteOptions{oneside,onecolumn,10pt,final}
+\ExecuteOptions{oneside,onecolumn,10pt,final,conference}
 \ProcessOptions
 
 
