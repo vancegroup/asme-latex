@@ -797,23 +797,36 @@
 
 
 
+\ifthenelse{\boolean{@asme@journal}} {
+  % JOURNAL PAPER
 
-\newcommand\@confshortname{}
-\newcommand\@conffullname{}
-\newcommand\@confdate{}
-\newcommand\@confmonth{}
-\newcommand\@confyear{}
-\newcommand\@confcity{}
-\newcommand\@confcountry{}
-\newcommand\@papernum{}
-\newcommand{\confshortname}[1]{\gdef\@confshortname{#1}}
-\newcommand{\conffullname}[1]{\gdef\@conffullname{#1}}
-\newcommand{\confdate}[1]{\gdef\@confdate{#1}}
-\newcommand{\confmonth}[1]{\gdef\@confmonth{#1}}
-\newcommand{\confyear}[1]{\gdef\@confyear{#1}}
-\newcommand{\confcountry}[1]{\gdef\@confcountry{#1}}
-\newcommand{\confcity}[1]{\gdef\@confcity{#1}}
-\newcommand{\papernum}[1]{\gdef\@papernum{#1}}
+   \newcommand{\confshortname}[1]{\typeout{Warning: in journal paper mode, so ignoring confshortname=#1}}
+   \newcommand{\conffullname}[1]{\typeout{Warning: in journal paper mode, so ignoring conffullname=#1}}
+   \newcommand{\confdate}[1]{\typeout{Warning: in journal paper mode, so ignoring confdate=#1}}
+   \newcommand{\confmonth}[1]{\typeout{Warning: in journal paper mode, so ignoring confmonth=#1}}
+   \newcommand{\confyear}[1]{\typeout{Warning: in journal paper mode, so ignoring confyear=#1}}
+   \newcommand{\confcountry}[1]{\typeout{Warning: in journal paper mode, so ignoring confcountry=#1}}
+   \newcommand{\confcity}[1]{\typeout{Warning: in journal paper mode, so ignoring confcity=#1}}
+   \newcommand{\papernum}[1]{\typeout{Warning: in journal paper mode, so ignoring papernum=#1}}
+} {
+  % CONFERENCE PAPER
+   \newcommand\@confshortname{}
+   \newcommand\@conffullname{}
+   \newcommand\@confdate{}
+   \newcommand\@confmonth{}
+   \newcommand\@confyear{}
+   \newcommand\@confcity{}
+   \newcommand\@confcountry{}
+   \newcommand\@papernum{}
+   \newcommand{\confshortname}[1]{\gdef\@confshortname{#1}}
+   \newcommand{\conffullname}[1]{\gdef\@conffullname{#1}}
+   \newcommand{\confdate}[1]{\gdef\@confdate{#1}}
+   \newcommand{\confmonth}[1]{\gdef\@confmonth{#1}}
+   \newcommand{\confyear}[1]{\gdef\@confyear{#1}}
+   \newcommand{\confcountry}[1]{\gdef\@confcountry{#1}}
+   \newcommand{\confcity}[1]{\gdef\@confcity{#1}}
+   \newcommand{\papernum}[1]{\gdef\@papernum{#1}}
+} % end of journal/conference conditional
 
 \if@titlepage
   \newcommand{\maketitle}{\begin{titlepage}%
