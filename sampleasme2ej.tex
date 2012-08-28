@@ -19,7 +19,7 @@
 %%% use twocolumn and 10pt options with the asme2ej format
 \documentclass[twocolumn,10pt,journal]{asme2e}
 
-\usepackage{psfig} %% for loading postscript figures
+\usepackage{graphicx} %% for loading figures
 
 %% The class has several options
 %  onecolumn/twocolumn - format for one or two columns per page
@@ -190,7 +190,7 @@ In the following subsections, I have inserted figures that have been provided by
 %%%%%%%%%%%%%%%% begin figure %%%%%%%%%%%%%%%%%%%
 %%% 3.34in is the maximum width you can have for a figure
 \begin{figure} 
-\centerline{\psfig{figure=figure/FMANU_MD_05_1107_11.ps,width=3.34in}}
+\centerline{\includegraphics[width=3.34in]{figure/FMANU_MD_05_1107_11}}
 \caption{Example taken from a paper that was held from production because the image quality is poor.  ASME sets figures captions in 8pt, Helvetica Bold.}
 \label{fig_example1.ps}
 \end{figure}
@@ -212,7 +212,7 @@ The poor quality of this figure is immediately obvious on the printed page, and 
 
 %%%%%%%%%%%%%%%% begin figure %%%%%%%%%%%%%%%%%%%
 \begin{figure} 
-\centerline{\psfig{figure=figure/FMANU_MD_05_1272_5.ps,width=3.34in}}
+\centerline{\includegraphics[width=3.34in]{figure/FMANU_MD_05_1272_5}}
 \caption{While this figures is easily readable at a double column width of 6.5in, when it is shrunk to 3.25in column width the text is unreadable.   This paper was held from production.}
 \label{fig_example2.ps}
 \end{figure}
@@ -228,8 +228,8 @@ This problem can be addressed by increasing the size of the figure to a double c
 \subsection{The 3rd Example of Bad Figure}
 %%%%%%%%%%%%%%%% begin figure %%%%%%%%%%%%%%%%%%%
 \begin{figure} 
-%\centerline{\psfig{figure=figure/FMANU_MD_04_1274_13.ps,width=3.34in}}
-\centerline{\psfig{figure=figure/FMANU_MD_04_1274_13.ps,width=3.25in}}
+%\centerline{\includegraphics[width=3.34in]{figure/FMANU_MD_04_1274_13}}
+\centerline{\includegraphics[width=3.25in]{figure/FMANU_MD_04_1274_13}}
 \caption{Another example of a figure with unreadable text.  Even when the paper was expanded to double column width the text as shown in Fig.~\ref{fig_example4.ps} was of such low quality that the paper was held from production.}
 \label{fig_example3.ps}
 \end{figure}
@@ -238,7 +238,7 @@ This problem can be addressed by increasing the size of the figure to a double c
 %%%%%%%%%%%%%%%% begin figure %%%%%%%%%%%%%%%%%%%
 %%% the maximum width in double column is 6.85in
 \begin{figure*} 
-\centerline{\psfig{figure=figure/FMANU_MD_04_1274_13.ps,width=6.85in}}
+\centerline{\includegraphics[width=6.85in]{figure/FMANU_MD_04_1274_13}}
 \caption{A figure expanded to double column width the text from Figure~\ref{fig_example3.ps}}
 \label{fig_example4.ps}
 \end{figure*}
