@@ -716,12 +716,18 @@
 \renewcommand{\dbltopfraction}{.9}
 \renewcommand{\dblfloatpagefraction}{.91}
 
-\newcommand\figurename{Figure}
 \newcommand\tablename{Table}
 \newcommand\partname{Part}
 \newcommand\appendixname{APPENDIX}
 \newcommand\refname{\@asme@heading@caps{References}}
 \newcommand\contentsname{CONTENTS}
+\ifthenelse{\boolean{@asme@journal}} {
+  % JOURNAL PAPER
+  \newcommand\figurename{Fig.}
+} {
+  % CONFERENCE PAPER
+  \newcommand\figurename{Figure}
+} % end of journal/conference conditional
 
 
 \long\def\@makecaption#1#2{ % This remains the same from asme.sty
