@@ -876,7 +876,7 @@
   \let\maketitle\relax\let\@maketitle\relax
   \gdef\@thanks{}\gdef\@author{}\gdef\@title{}}
 \fi
- 
+
 \renewcommand\title[1]{\gdef\@title{\uppercase{#1}}}
 
 \if@cleanhead
@@ -911,9 +911,10 @@
      \hfill \@confmonth\ \@confdate, \@confyear, \@confcity, \@confcountry
 
      \vskip.5in
+     \hfill {\pnumfnt\@papernum}
   } % end of journal/conference conditional
 
-  \hfill {\pnumfnt\@papernum}\end{flushright}}
+  \end{flushright}}
   \hskip1pc}}
   \ifthenelse{\boolean{@asme@journal}} {
      % Journal paper
