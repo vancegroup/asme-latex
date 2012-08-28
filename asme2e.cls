@@ -83,7 +83,7 @@
 \DeclareOption{11pt}{\renewcommand\@ptsize{1}} % Corresponds to 11pt font
 \DeclareOption{12pt}{\renewcommand\@ptsize{2}} % Corresponds to 12pt font
 
-\ExecuteOptions{oneside,onecolumn,10pt,final,conference}
+\ExecuteOptions{oneside,onecolumn,letterpaper,10pt,final,conference}
 \ProcessOptions
 
 
@@ -364,6 +364,8 @@
 
 \setlength{\paperheight}{11in}
 \setlength{\paperwidth}{8.5in}
+
+\RequirePackage{geometry}
 \ifthenelse{\boolean{@asme@journal}} {
   % JOURNAL PAPER
   \setlength{\oddsidemargin}{0.925in}
