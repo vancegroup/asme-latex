@@ -356,7 +356,7 @@
   \newcommand\@asme@heading@font{\tensfb}
 } % end of journal/conference conditional
 
-\newcommand\@asme@caption@text[1]{\small\textbf{\textsf{\@asme@heading@caps{#1}}}}
+\newcommand\@asme@caption@text[1]{\egtsfb\@asme@heading@caps{#1}}
 
 % -----------------------------------------------------------
 %                 Page Layout
@@ -744,7 +744,7 @@
 
 \long\def\@makecaption#1#2{ % This remains the same from asme.sty
    \par\addvspace{6pt}{\tensf
-   \setbox\@tempboxa\hbox{\egtsf#1.\quad\@asme@caption@text{#2}}%
+   \setbox\@tempboxa\hbox{\egtsfb#1.\quad\@asme@caption@text{#2}}%
    \ifdim \wd\@tempboxa >\hsize
        {\egtsf#1.\quad\ignorespaces\@asme@caption@text{#2}}\par
      \else
