@@ -181,10 +181,8 @@ Email: jmvance@iastate.edu
 \end_layout
 
 \begin_layout Abstract
-
-\shape italic
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -220,11 +218,7 @@ This article illustrates preparation of an ASME paper using LyX, a useful
  in italics.
 \end_layout
 
-\begin_layout Abstract
-
-\series bold
-Keywords: 
-\series default
+\begin_layout Keywords
 Virtual assembly, virtual reality, human-computer interaction.
 \end_layout
 
@@ -433,78 +427,41 @@ pt.
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-
-
-\backslash
-setlength{
-\backslash
-unitlength}{0.012500in}%
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{picture}(115,35)(255,545)
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-thicklines
-\end_layout
+\align center
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "50col%"
+height_special "none"
+status open
 
 \begin_layout Plain Layout
-
-
-\backslash
-put(255,545){
-\backslash
-framebox(115,35){}}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-put(275,560){Beautiful Figure}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{picture}
+\align center
+Beautiful Figure
 \end_layout
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Caption
 
 \begin_layout Plain Layout
-
-\family sans
-\series bold
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:ASME"
 
 \end_inset
 
-THE FIGURE CAPTION USES CAPITAL LETTERS.
+The figure caption uses capital letters.
 \end_layout
 
 \end_inset
@@ -539,15 +496,12 @@ evil red text
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption
 
 \begin_layout Plain Layout
-
-\family sans
-\series bold
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:ASME"

@@ -940,6 +940,7 @@
   \vskip2pc{\begin{center}\@author\par\end{center}}\vskip12pt}
 \fi
 
+
 \if@titlepage
   \newenvironment{abstract}{%
      \titlepage
@@ -951,24 +952,29 @@
      {\par\vfil\null\endtitlepage}
 \else
   \newenvironment{abstract}{%
-     \if@twocolumn
-        \ifthenelse{\boolean{@asme@journal}} {
+     \if@twocolumn %
+        \ifthenelse{\boolean{@asme@journal}}{ %
            % Journal paper
            \normalsize\noindent
-           \noindent
-         } {
+           \begin{itshape}
+         }{
            % Conference paper
            \normalsize\par\addvspace{12pt}\noindent
-           {\tensfb ABSTRACT}\par
+           {\tensfb ABSTRACT}\par\begin{itshape}
          } % end of journal/conference conditional
      \else
         \begin{center}
           {{\tensfb ABSTRACT}\vspace{-.5em}\vspace{\z@}}
         \end{center}
-        \quotation
+        \quotation\begin{itshape}
      \fi}
-     {\if@twocolumn\else\endquotation\fi}
+     {\end{itshape}\if@twocolumn\else\endquotation\fi}
 \fi
+
+\newcommand\keywords[1]{%
+  \par\noindent %\addvspace{12pt}
+  \normalsize\noindent\textup{\textbf{Keywords}:\quad #1 }}
+
 
 % Get the multiple author set
 

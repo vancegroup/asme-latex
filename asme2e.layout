@@ -23,6 +23,25 @@ Style Abstract
 	RightMargin          ""
 	TocLevel              1
 	NextNoIndent          0
+	TextFont
+		Shape Italic
+	EndFont
+	KeepEmpty 1
+End
+
+Style Keywords
+	Align		Left
+	AlignPossible	Left
+	LabelFont
+		Series		Bold
+	EndFont
+	LabelString	"Keywords: "
+	Margin First_Dynamic
+	LabelType	Static
+	LatexType Command
+	LatexName keywords
+	Category	FrontMatter
+	KeepEmpty 1
 End
 
 Style Acknowledgments
