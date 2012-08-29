@@ -102,7 +102,7 @@ Human-Computer Interaction Graduate Program
 status open
 
 \begin_layout Plain Layout
-Notice the ctrl-enters here to not start a new paragraph
+Notice the CTRL-ENTERs here to not start a new paragraph
 \end_layout
 
 \end_inset
@@ -806,10 +806,29 @@ The bibliography style required by the ASME is unsorted with entries appearing
 \shape smallcaps
 Bib
 \shape default
-TeX unsrt bibliography style could be used.
+TeX 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+unsrt
+\end_layout
+
+\end_inset
+
+ bibliography style could be used.
  Unfortunately, the bibliography style required by the ASME has additional
  requirements (last name followed by first name, periodical volume in boldface,
- periodical number inside parentheses, etc.) that are not part of the unsrt
+ periodical number inside parentheses, etc.) that are not part of the 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+unsrt
+\end_layout
+
+\end_inset
+
  style.
  Therefore, to get ASME bibliography formatting, you must use the 
 \begin_inset Flex Code
