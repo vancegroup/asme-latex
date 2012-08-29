@@ -66,6 +66,7 @@
 \RequirePackage{mathptmx}    % Loads the Times-Roman Math Fonts
 \RequirePackage{ifpdf}      % Needed to pick between latex and pdflatex
 \RequirePackage{cite}      % Replacing the embedded one.
+\RequirePackage{textcase}  % Safer upper/lowercasing
 
 \newboolean{@titlepage}
 \newcommand\@ptsize{}
@@ -361,7 +362,7 @@
 } {
   % CONFERENCE PAPER
   \typeout{ASME Conference Paper}
-  \newcommand\@asme@heading@caps{\MakeUppercase}
+  \newcommand\@asme@heading@caps{\MakeTextUppercase}
   \newcommand\@asme@heading@font{\tensfb}
 } % end of journal/conference conditional
 
@@ -671,7 +672,7 @@
 \newcommand\tableofcontents{%
     \section*{\contentsname
         \@mkboth{%
-           \MakeUppercase\contentsname}{\MakeUppercase\contentsname}}%
+           \MakeTextUppercase\contentsname}{\MakeTextUppercase\contentsname}}%
     \@starttoc{toc}%
     }
 \newcommand*\l@part[2]{%
@@ -711,16 +712,16 @@
 \newcommand*\l@subparagraph{\@dottedtocline{5}{10em}{5em}}
 \newcommand\listoffigures{%
     \section*{{List of Figures}
-      \@mkboth{\MakeUppercase{List of Figures}}
-              {\MakeUppercase{List of Figures}}}
+      \@mkboth{\MakeTextUppercase{List of Figures}}
+              {\MakeTextUppercase{List of Figures}}}
     \@starttoc{lof}%
     }
 \newcommand*\l@figure{\@dottedtocline{1}{1.5em}{2.3em}}
 \newcommand\listoftables{%
     \section*{{List of Tables}
       \@mkboth{%
-          \MakeUppercase{List of Tables}}
-         {\MakeUppercase{List of Tables}}}
+          \MakeTextUppercase{List of Tables}}
+         {\MakeTextUppercase{List of Tables}}}
     \@starttoc{lot}%
     }
 \let\l@table\l@figure
@@ -1046,7 +1047,7 @@
 \bibindent=1.5em
 \newenvironment{thebibliography}[1]
      {\section*{\refname
-        \@mkboth{\MakeUppercase\refname}{\MakeUppercase\refname}}%
+        \@mkboth{\MakeTextUppercase\refname}{\MakeTextUppercase\refname}}%
       \list{\@biblabel{\@arabic\c@enumiv}}%
            {\settowidth\labelwidth{\@biblabel{#1}}%
             \leftmargin\labelwidth
@@ -1136,7 +1137,7 @@
       \def\@oddhead{{\slshape\rightmark}\hfil\thepage}%
       \let\@mkboth\markboth
     \def\sectionmark##1{%
-      \markboth {\MakeUppercase{%
+      \markboth {\MakeTextUppercase{%
         \ifnum \c@secnumdepth >\z@
           \thesection\hskip 1em\relax
         \fi
@@ -1153,7 +1154,7 @@
     \def\@oddhead{{\slshape\rightmark}\hfil\thepage}%
     \let\@mkboth\markboth
     \def\sectionmark##1{%
-      \markright {\MakeUppercase{%
+      \markright {\MakeTextUppercase{%
         \ifnum \c@secnumdepth >\m@ne
           \thesection\quad
         \fi
