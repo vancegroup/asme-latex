@@ -358,15 +358,19 @@
   % JOURNAL PAPER
   \typeout{ASME Journal Paper}
   \newcommand\@asme@heading@caps{}
-  \newcommand\@asme@heading@font{\rmbf}
+  \DeclareFixedFont{\@asme@heading@font}{OT1}{ptm}{b}{n}{10}
 } {
   % CONFERENCE PAPER
   \typeout{ASME Conference Paper}
   \newcommand\@asme@heading@caps{\MakeTextUppercase}
-  \newcommand\@asme@heading@font{\tensfb}
+  \DeclareFixedFont{\@asme@heading@font}{OT1}{phv}{b}{n}{10}
 } % end of journal/conference conditional
 
-\newcommand\@asme@caption@text[1]{\egtsfb\@asme@heading@caps{#1}}
+\DeclareFixedFont{\@asme@caption@font}{OT1}{phv}{b}{n}{8}
+\DeclareFixedFont{\@asme@affiliation@font}{OT1}{phv}{m}{n}{10}
+\DeclareFixedFont{\@asme@author@font}{OT1}{phv}{b}{n}{10}
+
+\newcommand\@asme@caption@text[1]{\@asme@caption@font\@asme@heading@caps{#1}}
 
 % -----------------------------------------------------------
 %                 Page Layout
@@ -755,10 +759,10 @@
 
 
 \long\def\@makecaption#1#2{ % This remains the same from asme.sty
-   \par\addvspace{6pt}{\tensf
-   \setbox\@tempboxa\hbox{\egtsfb#1.\quad\@asme@caption@text{#2}}%
+   \par\addvspace{6pt}{
+   \setbox\@tempboxa\hbox{\@asme@caption@font#1.\quad\@asme@caption@text{#2}}%
    \ifdim \wd\@tempboxa >\hsize
-       {\egtsf#1.\quad\ignorespaces\@asme@caption@text{#2}}\par
+       {\@asme@caption@font#1.\quad\ignorespaces\@asme@caption@text{#2}}\par
      \else
        \hbox to\hsize{\hfil\box\@tempboxa\hfil}%
    \fi}} %
@@ -946,7 +950,7 @@
      \titlepage
      \null\vfil
      \begin{center}
-        {\tensfb ABSTRACT}
+        {\@asme@heading@font ABSTRACT}
         \@endparpenalty\@M
      \end{center}}
      {\par\vfil\null\endtitlepage}
@@ -960,11 +964,11 @@
          } {
            % Conference paper
            \normalsize\par\addvspace{12pt}\noindent
-           {\tensfb ABSTRACT}\par
+           {\@asme@heading@font ABSTRACT}\par
          } % end of journal/conference conditional
      \else
         \begin{center}
-          {{\tensfb ABSTRACT}\vspace{-.5em}\vspace{\z@}}
+          {{\@asme@heading@font ABSTRACT}\vspace{-.5em}\vspace{\z@}}
         \end{center}
         \quotation
      \fi}
@@ -1008,7 +1012,7 @@
  \next}
 
 
-\newcommand{\affiliation}[1]{\\ \tensf #1}
+\newcommand{\affiliation}[1]{\\ \@asme@affiliation@font #1}
 
 \def\@auseqi{{7.4in}}
 \def\@auseqii{{3.45in}{3.45in}}
@@ -1024,7 +1028,7 @@
 \renewcommand{\author}[1]{%
     \global\advance\@authcnt1
     \expandafter\gdef\csname @auth\romannumeral\the\@authcnt\endcsname
-    {\normalsize\sf\begin{tabular}[t]{@{}c@{}}\tensfb#1\\[20pt]
+    {\normalsize\sf\begin{tabular}[t]{@{}c@{}}\@asme@author@font#1\\[20pt]
      \end{tabular}}}
 
 % ---------------------------------------------------------------------------
