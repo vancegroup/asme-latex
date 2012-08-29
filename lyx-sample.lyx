@@ -14,24 +14,6 @@
 %  titlepage/notitlepage - put in titlepage or leave out titlepage
 %  
 %% The default is oneside, onecolumn, 10pt, final
-
-%%% Replace here with information related to your conference
-\confshortname{IDETC/CIE 2009}
-\conffullname{the ASME 2009 International Design Engineering Technical Conferences \&\\
-              Computers and Information in Engineering Conference}
-
-%%%%% for date in a single month, use
-%\confdate{24-28}
-%\confmonth{September}
-%%%%% for date across two months, use
-\confdate{August 30-September 2}
-\confyear{2009}
-\confcity{San Diego}
-\confcountry{USA}
-
-%%% Replace DETC2009/MESA-12345 with the number supplied to you 
-%%% by ASME for your paper.
-\papernum{DETC2009/MESA-12345}
 \end_preamble
 \options twocolumn,10pt
 \use_default_options true
@@ -61,7 +43,7 @@ logicalmkup
 \float_placement t
 \paperfontsize default
 \spacing single
-\use_hyperref true
+\use_hyperref false
 \pdf_bookmarks true
 \pdf_bookmarksnumbered false
 \pdf_bookmarksopen false
@@ -77,7 +59,7 @@ logicalmkup
 \use_esint 1
 \use_mhchem 1
 \use_mathdots 1
-\cite_engine natbib_numerical
+\cite_engine basic
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -180,38 +162,60 @@ Email: jmvance@iastate.edu
 
 \end_layout
 
-\begin_layout Abstract
-
-\shape italic
+\begin_layout Standard
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-
-\shape italic
-To set the paper number, conference, and other options, please go to the
- 
-\begin_inset Quotes eld
-\end_inset
-
-LaTeX Preamble
-\begin_inset Quotes erd
-\end_inset
-
- tab of 
-\family sans
-\shape default
-Document\SpecialChar \menuseparator
-Settings
-\family default
-\SpecialChar \ldots{}
-
-\shape italic
- 
+The following information is used to build the header, copyright notice,
+ etc.
+ (Items that would be in the preamble if you were writing LaTeX by hand.
 \end_layout
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Conference (Short Name)
+IDETC/CIE 2009
+\end_layout
+
+\begin_layout Conference (Full Name)
+the ASME 2009 International Design Engineering Technical Conferences &
+\begin_inset Newline newline
+\end_inset
+
+Computers and Information in Engineering Conference
+\end_layout
+
+\begin_layout Conference Month
+
+\end_layout
+
+\begin_layout Conference Date
+August 30-September 2
+\end_layout
+
+\begin_layout Conference Year
+2009
+\end_layout
+
+\begin_layout Conference City
+San Diego
+\end_layout
+
+\begin_layout Conference Country
+USA
+\end_layout
+
+\begin_layout Paper Number
+DETC2009/MESA-12345
+\end_layout
+
+\begin_layout Abstract
+
+\shape italic
 This article illustrates preparation of an ASME paper using LyX, a useful
  graphical editor that produces output using LaTeX.
  This sample document's text is essentially directly copied from the plain
@@ -225,7 +229,7 @@ This article illustrates preparation of an ASME paper using LyX, a useful
 \series bold
 Keywords: 
 \series default
-Virtual assembly, virtual reality, human-computer interaction.
+Document preparation, LaTeX, human-computer interaction.
 \end_layout
 
 \begin_layout Section
@@ -274,7 +278,7 @@ asme2e
 
  files.
  You'll note that in the editor, you don't have to manually put the headings
- in all-capitals: we can let LaTeX do that for us.
+ or captions in all-capitals: we can let LaTeX do that for us.
  Marking the affiliation of authors is a 
 \begin_inset Quotes eld
 \end_inset
@@ -284,8 +288,25 @@ text style
 \end_inset
 
  accessible through the right click menu.
- About the only thing you have to do manually is make sure your captions
- are in all caps, sans serif, and boldface.
+ In LyX, you can specify the various conference details using special paragraph
+ styles that are visible in the source document and automatically transformed
+ into the preamble commands for LaTeX.
+\end_layout
+
+\begin_layout Standard
+You can also specify the document class option 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+journal
+\end_layout
+
+\end_inset
+
+ to switch from conference to journal mode.
+ You can leave in the conference meta-data initially: it will warn you but
+ not cause errors.
 \end_layout
 
 \begin_layout Section
@@ -328,13 +349,12 @@ ASME assigns each accepted paper with a unique number.
 status collapsed
 
 \begin_layout Plain Layout
-DETC98/DAC-1234
+DETC2009/MESA-12345
 \end_layout
 
 \end_inset
 
- in the document preamble with the paper number supplied to you by ASME
- for your paper.
+ above with the paper number supplied to you by ASME for your paper.
 \end_layout
 
 \begin_layout Section
@@ -495,17 +515,15 @@ end{picture}
 \begin_inset Caption
 
 \begin_layout Plain Layout
-
-\family sans
-\series bold
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:ASME"
+The figure caption uses capital letters.
+\end_layout
 
 \end_inset
 
-THE FIGURE CAPTION USES CAPITAL LETTERS.
-\end_layout
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ASME"
 
 \end_inset
 
@@ -539,23 +557,21 @@ evil red text
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption
 
 \begin_layout Plain Layout
-
-\family sans
-\series bold
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:ASME"
+The table caption uses capital letters, too.
+\end_layout
 
 \end_inset
 
-THE TABLE CAPTION USES CAPITAL LETTERS, TOO.
-\end_layout
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:ASME"
 
 \end_inset
 
