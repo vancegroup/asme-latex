@@ -564,6 +564,29 @@ status open
 
 \begin_layout Plain Layout
 The table caption uses capital letters, too.
+ If you wanted to talk about 
+\begin_inset Flex NoCaseChange
+status collapsed
+
+\begin_layout Plain Layout
+5
+\begin_inset space \thinspace{}
+\end_inset
+
+in
+\end_layout
+
+\end_inset
+
+, use text style 
+\begin_inset Quotes eld
+\end_inset
+
+NoCaseChange.
+\begin_inset Quotes erd
+\end_inset
+
+
 \end_layout
 
 \end_inset

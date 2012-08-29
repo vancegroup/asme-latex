@@ -72,6 +72,15 @@ InsetLayout Affiliation
 	KeepEmpty 1
 End
 
+InsetLayout NoCaseChange
+	Decoration Classic
+	LyxType charstyle
+	CustomPars 0
+	LatexType Command
+	LatexName NoCaseChange
+	ContentAsLabel 1
+End
+
 Style "Conference (Short Name)"
 	Align		Left
 	AlignPossible	Left
