@@ -8,8 +8,18 @@ Input article.layout
 
 OutputType latex
 
+Provides array 1
+
+# "fakeout" to disable natbib
+Provides natbib-internal 1
+
+
 NoStyle Part
 NoStyle Part*
+NoStyle Paragraph
+NoStyle Paragraph*
+NoStyle Subparagraph
+NoStyle Subparagraph*
 NoStyle Date
 NoStyle Address
 NoStyle "Right Address"
@@ -58,7 +68,67 @@ InsetLayout Affiliation
 	LatexType Command
 	LatexName affiliation
 	LabelString Affiliation
+	ParbreakIsNewline 1
 	KeepEmpty 1
+End
+
+Style "Conference (Short Name)"
+	Align		Left
+	AlignPossible	Left
+	LabelType	Static
+	LatexType	Command
+	Category	ConferenceInfo
+	Margin		Dynamic
+	InPreamble	1
+	KeepEmpty	1
+	Font
+		Color green
+		Family Typewriter
+	EndFont
+	LabelFont
+		Series Bold
+	EndFont
+	Labelsep "  "
+	LabelString	"Conference (Short Name):
+	LatexName	confshortname
+End
+Style "Conference (Full Name)"
+	CopyStyle	"Conference (Short Name)"
+	LabelString	"Conference (Full Name):"
+	ParbreakIsNewline 1
+	LatexName	conffullname
+End
+
+Style "Conference Month"
+	CopyStyle	"Conference (Short Name)"
+	LabelString	"Conference Month (for single month):"
+	LatexName	confmonth
+End
+
+Style "Conference Date"
+	CopyStyle	"Conference (Short Name)"
+	LabelString	"Conference Date (include month if in two months):"
+	LatexName	confdate
+End
+Style "Conference Year"
+	CopyStyle	"Conference (Short Name)"
+	LabelString	"Conference Year:"
+	LatexName	confyear
+End
+Style "Conference City"
+	CopyStyle	"Conference (Short Name)"
+	LabelString	"Conference City:"
+	LatexName	confcity
+End
+Style "Conference Country"
+	CopyStyle	"Conference (Short Name)"
+	LabelString	"Conference Country:"
+	LatexName	confcountry
+End
+Style "Paper Number"
+	CopyStyle	"Conference (Short Name)"
+	LabelString	"Paper Number:"
+	LatexName	papernum
 End
 
 Style Section
@@ -67,5 +137,18 @@ End
 Style Section*
 	NextNoIndent          0
 End
-
+Style Subsection
+	NextNoIndent          0
+End
+Style Subsection*
+	NextNoIndent          0
+End
+Style Subsubsection
+	NextNoIndent          0
+	LeftMargin "MM"
+End
+Style Subsubsection*
+	NextNoIndent          0
+	LeftMargin "MM"
+End
 
