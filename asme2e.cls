@@ -890,8 +890,9 @@
   \let\maketitle\relax\let\@maketitle\relax
   \gdef\@thanks{}\gdef\@author{}\gdef\@title{}}
 \fi
-
-\renewcommand\title[1]{\gdef\@title{\uppercase{#1}}}
+ 
+%\renewcommand\title[1]{\gdef\@title{\uppercase{#1}}}
+\renewcommand\title[1]{\gdef\@title{#1}}
 
 \if@cleanhead
 \def\@maketitle{%
